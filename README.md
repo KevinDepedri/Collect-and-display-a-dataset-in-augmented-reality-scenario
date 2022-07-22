@@ -13,6 +13,9 @@ The user can scan an area with his/her own device, take pictures of the environm
 
 # Animations/Images of the app
 
+# Future works/implementations
+
 # Licence
 
 # Contact
+Ditta Demolizioni SPA
