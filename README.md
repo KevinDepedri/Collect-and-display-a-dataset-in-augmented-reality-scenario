@@ -4,9 +4,10 @@ This repo shows how to collect pictures of an environment
 
 # About the project -> general overview
 
-The project is the collection of a dataset in augmented reality. The general concept is to take pictures of objects from different perspectives
-and used them for a training of a NErf.
-The user can scan an area with his/her own device, take pictures of the environment, saving on a Cloud and visualize them in a second moment in the same location, inclinatio
+The project consists in the collection of a dataset in augmented reality. 
+
+The user can scan the environment with his/her device.
+After a tap on the screen the application will place an anchor and hologram of the camera view. The user can place an unlimited number of objects, each of them is stored in a predefined path in the device.
 
 
 # Getting started
