@@ -2,7 +2,7 @@
 
 # About the project
 
-This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 (Master in Artificial Intelligent Systems) at the University of Trento and consists in the collection of a dataset in augmented reality.<\n>
+This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 (Master in Artificial Intelligent Systems) at the University of Trento and consists in the collection of a dataset in augmented reality.
 The app has been developed using Unity Editor and then built and tested on Android devices.  
 
 
@@ -11,7 +11,7 @@ The app has been developed using Unity Editor and then built and tested on Andro
 * Install Unity editor 2021.3 or later versions;
 * Install all the required packages from Window -> Package Manager and install AR Foundation and ARCore Plugin; 
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
-* Click on File -> Build Settings and from the window opened switch platform clicking on Android and then Switch Platform;
+* Click on \fbox{File -> Build Settings} and from the window opened switch platform clicking on Android and then Switch Platform;
 * Connect your mobile phone to the computer;
 * Choose your device from the Run Device section;
 * Click Build and Run;
@@ -24,15 +24,17 @@ Once the pictures are taken the user can choose between three options:
 * Remove last object: delete the last hologram created;
 * Resolve anchor: retrieve the anchors uploaded and place the holograms in the correct positions.
 
-**NOTE**: all the pictures are saved in a predefined path in the device ()
+**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
 
 
 # Demo (GIFs or pictures)
 
-# Future works/implementations
-* Training of neural networks;
-* NeRF;
-
+# Future implementations and usages
+* Add the option to save the pictures in a path choosen by the user;
+* Add the possibility to remove a predefined object, not only the last one;
+* Renderization of the back of the hologram;
+* Collections of more datasets;
+* Training of neural networks (NeRF);
 
 
 
