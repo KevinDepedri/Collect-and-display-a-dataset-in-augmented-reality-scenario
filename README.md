@@ -1,14 +1,14 @@
-# Collect-and-display-a-dataset-in-augmented-reality-scenario
-This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course aa 2021-2022 (Master in Artificial Intelligent Systems) at the University of Trento.
-The app is intended for Android devices only.
+# <p align="center">Collect-and-display-a-dataset-in-augmented-reality-scenario</p>
+
+
+
+
 
 
 # About the project
 
-The project consists in the collection of a dataset in augmented reality.
-The app 
-
-
+This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 (Master in Artificial Intelligent Systems) at the University of Trento and consists in the collection of a dataset in augmented reality.
+The app has been developed using Unity Editor and then mounted and tested on Android devices.  
 
 
 # Getting started
@@ -21,7 +21,9 @@ The app
 * Choose your device from the Run Device section;
 * Click Build and Run;
 
-# Animations/Images of the app
+# Descriptio
+
+# Demo
 
 # Future works/implementations
 * Training of neural networks;
