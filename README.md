@@ -9,9 +9,9 @@ The app has been developed using Unity Editor and then built and tested on Andro
 # Getting started
 
 * Install Unity editor 2021.3 or later versions;
-* Install all the required packages from Window -> Package Manager and install AR Foundation and ARCore Plugin; 
+* Install all the required packages from Window -> Package Manager and install AR Foundation and ARCore XR Plugin; 
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
-* Click on \fbox{File -> Build Settings} and from the window opened switch platform clicking on Android and then Switch Platform;
+* Click on File -> Build Settings and from the window opened switch platform clicking on Android and then Switch Platform;
 * Connect your mobile phone to the computer;
 * Choose your device from the Run Device section;
 * Click Build and Run;
