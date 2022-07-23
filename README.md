@@ -5,7 +5,8 @@ The app is intended for Android devices only.
 
 # About the project
 
-The project consists in the collection of a dataset in augmented reality. 
+The project consists in the collection of a dataset in augmented reality.
+The app 
 
 
 
