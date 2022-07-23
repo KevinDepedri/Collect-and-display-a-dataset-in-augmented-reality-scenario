@@ -1,20 +1,31 @@
 # Collect-and-display-a-dataset-in-augmented-reality-scenario
-This repo shows how to collect pictures of an environment
+This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course aa 2021-2022 at the University of Trento.
+The app is intended for Android devices only.
 
 
-# About the project -> general overview
+# About the project
 
 The project consists in the collection of a dataset in augmented reality. 
 
-The user can scan the environment with his/her device.
-After a tap on the screen the application will place an anchor and hologram of the camera view. The user can place an unlimited number of objects, each of them is stored in a predefined path in the device.
+After the app started, the device starts scanning the area around for at least 15 seconds. 
+Through a tap on the screen the device takes a picture of the environment, places it on a plane and creates an hologram. The hologram is then instatiated in the same position and with the same inclination of the camera of the mobile phone along with an anchor (https://www.andreasjakl.com/raycast-anchor-placing-ar-foundation-holograms-part-3/). The pictures are saved in a predefined path ().   
 
 
 # Getting started
 
+* Install Unity editor 2021.3 or later versions;
+* Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
+* Be sure you have installed all the required packages in Unity environment ()
+* Click 
+* 
+
 # Animations/Images of the app
 
 # Future works/implementations
+
+
+
+
 
 # Licence
 
