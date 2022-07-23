@@ -14,15 +14,18 @@ Through a tap on the screen the device takes a picture of the environment, place
 # Getting started
 
 * Install Unity editor 2021.3 or later versions;
+* Install all the required packages from Window -> Package Manager and install AR Foundation and ARCore Plugin; 
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
-* Be sure you have installed all the required packages in Unity environment ()
-* Click 
-* 
+* Click on File -> Build Settings and from the window opened switch platform clicking on Android and then Switch Platform;
+* Connect your mobile phone to the computer;
+* Choose your device from the Run Device section;
+* Click Build and Run;
 
 # Animations/Images of the app
 
 # Future works/implementations
-
+* Training of neural networks;
+* NeRF;
 
 
 
