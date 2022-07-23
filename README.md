@@ -18,7 +18,7 @@ The app has been developed using Unity Editor and then built and tested on Andro
 
 # Description
 The first phase consists in scanning around the environment for at least 15 seconds. After that the app is ready to take the pictures.
-The user has to tap on the screen and the device will capture the view field of the camera. <\br>The picture is then placed on a virtual plane (hologram), along with an anchor (for more informations https://www.andreasjakl.com/raycast-anchor-placing-ar-foundation-holograms-part-3/) which is instantiated in the environment.
+The user has to tap on the screen and the device will capture the view field of the camera. <br/>The picture is then placed on a virtual plane (hologram), along with an anchor (for more informations https://www.andreasjakl.com/raycast-anchor-placing-ar-foundation-holograms-part-3/) which is instantiated in the environment.
 Once the pictures are taken the user can choose between three options: 
 * Host anchor: upload the anchor points on a cloud;
 * Remove last object: delete the last hologram created;
