@@ -1,4 +1,4 @@
-# <p align="center">Collect-and-display-a-dataset-in-augmented-reality-scenario</p>
+# <p align="center">Collect and display a dataset in augmented reality scenario</p>
 
 # About the project
 
