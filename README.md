@@ -63,7 +63,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 - [x] Renderization of the back of the hologram;
 
-- [ ] Extension of the anchors time;
+- [ ] Extension of the anchors survival time;
 
 - [ ] Training of neural networks (NeRF);
 
