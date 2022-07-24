@@ -20,7 +20,7 @@
 
 
 # Description
-At the start the ARSession instantiates a cartesian coordinates system (x,y,z). These values, along with the inclination of the camera, will be used for the retrieving of the amchors. The usage of the application is summirize in the folloqing bullet list:
+At the start the ARSession instantiates a cartesian coordinates system (x,y,z). These values, along with the inclination of the camera, will be used for the istantiation and retrie of the anchors. The usage of the application is summirize in the following bullet list:
 
 1) The first phase consists in scanning around the environment for at least 15 seconds;
 2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
@@ -29,6 +29,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z). 
    - Host anchor: upload the anchor points on a cloud;
    - Remove last object: delete the last hologram created;
    - Resolve anchor: retrieve the anchors uploaded and place the holograms in the correct positions.
+
 <br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
 
 
