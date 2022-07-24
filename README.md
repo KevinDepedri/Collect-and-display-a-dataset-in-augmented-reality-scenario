@@ -2,8 +2,8 @@
 
 # About the project
 
-This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 (Master in Artificial Intelligent Systems) at the University of Trento and consists in the collection of a dataset in augmented reality.
-The app has been developed using Unity Editor and then built and tested on Android devices.  
+This project has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento.<br/>
+it aims to the collection of a dataset in an augmented reality scenario. The app has been developed using Unity Editor and then built and tested on Android devices.  
 
 
 # Getting started
