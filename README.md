@@ -29,8 +29,11 @@
 At the start the ARSession instantiates a cartesian coordinates system (x,y,z) with the origin in the position of the device's camera. These values, along with the inclination of the ARcamera, will be used for the istantiation and retrieve of the anchors. The usage of the application is summarize in the following bullet list:
 
 1) The first phase consists in scanning around the environment for at least 15 seconds;
+
 2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
+
 3) The hologram is visible through the device camera as a plane with the picture as texture. It is placed in the ARcamera's coordinates with the same inclination;
+
 4) After having placed the holograms the user has three choices:
    - **Host anchor**: upload the anchor points on a cloud;
    - **Remove last object**: delete the last hologram created;
