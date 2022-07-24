@@ -11,10 +11,10 @@
 * Install all the required packages from `Window -> Package Manager` and install AR Foundation and ARCore XR Plugin; 
 ## Build of the application
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
-* Click on File -> Build Settings and from the open window switch platform clicking on Android and then Switch Platform;
+* Click on `File -> Build Settings` and from the open window switch platform clicking on Android and then Switch Platform;
 * Connect your mobile phone to the computer;
 * Choose your device from the Run Device section;
-* Click Build and Run;
+* Click `Build and Run`;
 
 # Description
 The first phase consists in scanning around the environment for at least 15 seconds. After that the app is ready to take the pictures.
