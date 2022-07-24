@@ -61,7 +61,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 - [ ] Add the possibility to remove a predefined object, not only the last one;
 
-- [ ] Renderization of the back of the hologram;
+- [x] Renderization of the back of the hologram;
 
 - [ ] Extension of the anchors time;
 
