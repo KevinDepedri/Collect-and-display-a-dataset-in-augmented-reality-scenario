@@ -7,11 +7,13 @@
 
 # Getting started
 ## Setup of the Unity Environment
+
 * Install Unity editor 2021.3 or later versions;
 
 * Install all the required packages from `Window -> Package Manager` and install AR Foundation and ARCore XR Plugin; 
 
 ## Build of the application
+
 * Download this repo and open the "Sample Scene" file or clone this repo from Unity;
 
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
@@ -39,27 +41,30 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
    - **Remove last object**: delete the last hologram created;
    - **Resolve anchor**: retrieve the anchors uploaded and place the holograms in the correct positions.
 
-<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
+<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png)
 
 
 
 
 # Demo (GIFs or pictures)
 
-# Future implementations and usages
-- Add the option to save the pictures in a path choosen by the user;
+# Future implementations
 
-- Add the possibility to remove a predefined object, not only the last one;
+- [] Add the option to save the pictures in a path choosen by the user;
 
-- Renderization of the back of the hologram;
+- [] Add the possibility to remove a predefined object, not only the last one;
 
-- Collections of more datasets;
+- [] Renderization of the back of the hologram;
 
-- Training of neural networks (NeRF);
+- [] Extension of the anchors time;
+
+- [] Training of neural networks (NeRF);
 
 
 
 # Licence
 
 # Contact
-Ditta Demolizioni SPA
+Giovanni Ambrosi - mail -
+
+Kevin Depedri - mail -
