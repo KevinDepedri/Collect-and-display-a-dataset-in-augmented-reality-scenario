@@ -57,6 +57,8 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 ![this is an image](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/Il%20mio%20progetto-1%20(1).png?raw=true)
 
+
+
 # Future implementations
 
 - [ ] Add the option to save the pictures in a path choosen by the user;
