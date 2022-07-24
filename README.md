@@ -69,6 +69,6 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 
 # Contact
-Giovanni Ambrosi - [mail](giovanni.ambrosi@studenti.unitn.it) -
+Giovanni Ambrosi - (giovanni.ambrosi@studenti.unitn.it) -
 
-Kevin Depedri -[mail](kevin.depedri@studenti.unitn.it) -
+Kevin Depedri - (kevin.depedri@studenti.unitn.it) -
