@@ -2,7 +2,7 @@
 
 # About the project
 
-**The project aims to the collection of a dataset in an augmented reality scenario.** <br/> It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento.<br/> The app has been developed using Unity Editor and then built and tested on Android devices.  
+**The project aims to the collection of a dataset in an augmented reality scenario.** <br/> It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento.<br/> The app is intended for Android devices only.  
 
 
 # Getting started
@@ -11,7 +11,7 @@
 * Install all the required packages from Window -> Package Manager and install AR Foundation and ARCore XR Plugin; 
 ## Build of the application
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
-* Click on File -> Build Settings and from the window opened switch platform clicking on Android and then Switch Platform;
+* Click on File -> Build Settings and from the open window switch platform clicking on Android and then Switch Platform;
 * Connect your mobile phone to the computer;
 * Choose your device from the Run Device section;
 * Click Build and Run;
