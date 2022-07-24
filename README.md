@@ -28,7 +28,7 @@
 
 
 # Description
-At the start the ARSession instantiates a cartesian coordinates system (x,y,z) with the origin in the position of the device's camera. These values, along with the inclination of the ARcamera, will be used for the istantiation and retrieve of the anchors. <br/>The usage of the application is summarize in the following bullet list:
+At the start the ARSession instantiates a cartesian coordinates system (x,y,z) with the origin in the position of the device's camera. A fourth value stored in a quaternion indicates the inclination of the ARcamera. These values will be used for the istantiation and retrieve of the anchors. <br/>The usage of the application is summarize in the following bullet list:
 
 1) The first phase consists in scanning around the environment for at least 15 seconds;
 
