@@ -68,7 +68,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 - [ ] Training of neural networks (NeRF);
 
 
-# Contact
+# Contacts
 Giovanni Ambrosi - (giovanni.ambrosi@studenti.unitn.it) -
 
 Kevin Depedri - (kevin.depedri@studenti.unitn.it) -
