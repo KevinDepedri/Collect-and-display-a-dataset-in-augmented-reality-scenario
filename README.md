@@ -26,20 +26,10 @@ At the start the application instatiates a cartesian coordinates system with the
 2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
 3) The hologram is visible through the device camera as a plane with the pictures as texture. It is placed in the camera's coordinates with the same inclination;
 4) After having placed the holograms the user has three choices:
-*
-*
-*
-**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
-
-
-
-
-The first phase consists in scanning around the environment for at least 15 seconds. After that the app is ready to take the pictures.
-<br/>The user has to tap on the screen and the device will capture the view field of the camera. <br/>The picture is then placed on a virtual plane (hologram), along with an anchor (for more informations https://www.andreasjakl.com/raycast-anchor-placing-ar-foundation-holograms-part-3/) which is instantiated in the environment.
-Once the pictures are taken the user can choose between three options: 
 * Host anchor: upload the anchor points on a cloud;
 * Remove last object: delete the last hologram created;
 * Resolve anchor: retrieve the anchors uploaded and place the holograms in the correct positions.
+**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
 
 
 
