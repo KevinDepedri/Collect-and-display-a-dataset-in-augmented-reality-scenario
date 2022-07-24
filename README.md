@@ -8,19 +8,25 @@
 # Getting started
 ## Setup of the Unity Environment
 * Install Unity editor 2021.3 or later versions;
+
 * Install all the required packages from `Window -> Package Manager` and install AR Foundation and ARCore XR Plugin; 
+
 ## Build of the application
 * Download this repo and open the "Sample Scene" file or clone this repo from Unity;
+
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
+
 * Connect your mobile phone to the computer;
+
 * Choose your device from the `Run Device` section;
+
 * Click `Build and Run`;
 
 
 
 
 # Description
-At the start the ARSession instantiates a cartesian coordinates system (x,y,z). These values, along with the inclination of the ARcamera, will be used for the istantiation and retrie of the anchors. The usage of the application is summirize in the following bullet list:
+At the start the ARSession instantiates a cartesian coordinates system (x,y,z) with the origin in the position of the device's camera. These values, along with the inclination of the ARcamera, will be used for the istantiation and retrieve of the anchors. The usage of the application is summarize in the following bullet list:
 
 1) The first phase consists in scanning around the environment for at least 15 seconds;
 2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
