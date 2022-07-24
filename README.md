@@ -2,7 +2,7 @@
 
 # About the project
 
-**The project aims to the collection of a dataset in an augmented reality scenario.** <br/> It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
+**The project aims to the collection of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
 
 
 # Getting started
@@ -10,13 +10,30 @@
 * Install Unity editor 2021.3 or later versions;
 * Install all the required packages from `Window -> Package Manager` and install AR Foundation and ARCore XR Plugin; 
 ## Build of the application
-* Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
+* Download this repo and open the "Sample Scene" file or clone this repo from Unity;
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
 * Connect your mobile phone to the computer;
 * Choose your device from the `Run Device` section;
 * Click `Build and Run`;
 
+
+
+
 # Description
+At the start the application instatiates a cartesian coordinates system with the origin in the actual position of the camera. This values, along with the inclination of the camera, will be used for the retrieving of the session.
+
+1) The first phase consists in scanning around the environment for at least 15 seconds;
+2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
+3) The hologram is visible through the device camera as a plane with the pictures as texture. It is placed in the camera's coordinates with the same inclination;
+4) After having placed the holograms the user has three choices:
+*
+*
+*
+**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
+
+
+
+
 The first phase consists in scanning around the environment for at least 15 seconds. After that the app is ready to take the pictures.
 <br/>The user has to tap on the screen and the device will capture the view field of the camera. <br/>The picture is then placed on a virtual plane (hologram), along with an anchor (for more informations https://www.andreasjakl.com/raycast-anchor-placing-ar-foundation-holograms-part-3/) which is instantiated in the environment.
 Once the pictures are taken the user can choose between three options: 
@@ -24,7 +41,7 @@ Once the pictures are taken the user can choose between three options:
 * Remove last object: delete the last hologram created;
 * Resolve anchor: retrieve the anchors uploaded and place the holograms in the correct positions.
 
-**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerFactory.appname/files/SavedImage/Image-x.png)
+
 
 
 # Demo (GIFs or pictures)
