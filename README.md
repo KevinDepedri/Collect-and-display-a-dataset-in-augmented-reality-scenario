@@ -44,6 +44,13 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 <br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png)
 
 
+# Documentation and useful links
+* [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
+
+* [Unity Fundamentals](https://www.andreasjakl.com/ar-foundation-fundamentals-with-unity-part-1/)
+
+* [Anchors and Raycasting](https://www.andreasjakl.com/ar-foundation-fundamentals-with-unity-part-3/)
+
 
 
 # Demo (GIFs or pictures)
