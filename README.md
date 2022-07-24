@@ -50,15 +50,15 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 # Future implementations
 
-- [] Add the option to save the pictures in a path choosen by the user;
+- [ ] Add the option to save the pictures in a path choosen by the user;
 
-- [] Add the possibility to remove a predefined object, not only the last one;
+- [ ] Add the possibility to remove a predefined object, not only the last one;
 
-- [] Renderization of the back of the hologram;
+- [ ] Renderization of the back of the hologram;
 
-- [] Extension of the anchors time;
+- [ ] Extension of the anchors time;
 
-- [] Training of neural networks (NeRF);
+- [ ] Training of neural networks (NeRF);
 
 
 
