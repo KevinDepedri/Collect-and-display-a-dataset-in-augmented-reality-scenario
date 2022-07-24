@@ -8,7 +8,7 @@
 # Getting started
 ## Setup of the Unity Environment
 * Install Unity editor 2021.3 or later versions;
-* Install all the required packages from 'Window -> Package Manager' and install AR Foundation and ARCore XR Plugin; 
+* Install all the required packages from `Window -> Package Manager` and install AR Foundation and ARCore XR Plugin; 
 ## Build of the application
 * Download this repo, unzip the package and open the "Sample Scene" file or clone this repo and import from Unity;
 * Click on File -> Build Settings and from the open window switch platform clicking on Android and then Switch Platform;
