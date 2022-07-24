@@ -55,7 +55,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 # Demo (GIFs or pictures)
 
-![this is an image](C:\Users\utente\Downloads\Il mio progetto-1 (1) )
+![this is an image](C:\Users\utente\Downloads\Il mio progetto-1 (1).png )
 
 # Future implementations
 
