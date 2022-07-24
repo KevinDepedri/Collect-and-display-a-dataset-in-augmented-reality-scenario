@@ -2,7 +2,7 @@
 
 # About the project
 
-**The project aims to the collection of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
+**The project aims to the collection and visualization of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
 
 
 # Getting started
@@ -69,6 +69,6 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 
 # Contact
-Giovanni Ambrosi - mail -
+Giovanni Ambrosi - [mail](giovanni.ambrosi@studenti.unitn.it) -
 
-Kevin Depedri - mail -
+Kevin Depedri -[mail](kevin.depedri@studenti.unitn.it) -
