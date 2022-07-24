@@ -55,7 +55,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 # Demo (GIFs or pictures)
 
-![this is an image](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/Il%20mio%20progetto-1%20(1).png?raw=true)
+![this is an image](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/10addio.gif?raw=true)
 
 
 
