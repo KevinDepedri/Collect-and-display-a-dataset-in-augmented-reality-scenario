@@ -15,7 +15,7 @@
 * -ARCore XR Plugin
 * -ARCore Extensions (link: ....)
 
-* Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions`: by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`
+* Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`
 
 ## Build of the application
 
@@ -66,13 +66,17 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 
 # Future implementations
 
-- [ ] Add the option to save the pictures in a path choosen by the user;
+- [ ] Add support for API to host also images and Json file on the cloud allowing for a full information retrieval from other devices;
 
-- [ ] Add the possibility to remove a predefined object, not only the last one;
+- [ ] Add real-time information about the quaity of the generated feature map to encurage users to explore more the environment;
 
-- [ ] Renderization of the back of the hologram;
+- [ ] Add the option to save the pictures in a path choosen by the user and to show the pictures in the image gallery;
 
-- [ ] Extension of the anchors survival time;
+- [ ] Add the possibility to remove a precise object aiming at it instead of removing the last one placed;
+
+- [ ] Renderization of the back of the hologram to visualize holograms from every view angle;
+
+- [ ] Extension of the anchors survival time up to 365 days;
 
 - [ ] Training of neural networks (NeRF);
 
