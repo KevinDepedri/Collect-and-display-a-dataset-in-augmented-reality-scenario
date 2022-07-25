@@ -12,13 +12,13 @@
 * Install Unity editor 2021.3 or later versions;
 
 * Install all the following required packages from `Window -> Package Manager`:
-* -AR Foundation
-* -ARCore XR Plugin
-* -ARCore Extensions (link: ....)
+* -AR Foundation;
+* -ARCore XR Plugin;
+* -ARCore Extensions (link: ....);
 
-* Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`
+* Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`;
 
-* If the previous `API Key` does not work please follow this procedure to generate your own API Key: (link: .....)
+* If the previous `API Key` does not work please follow this procedure to generate your own API Key: (link: .....);
 
 
 
@@ -42,19 +42,19 @@ The application is based in 2 main classes: ARPlacementManager and ARCloudAnchor
 
 ### ARPlacementManager
 The ARPlacementManager class handles all the procedure with regards to the screenshot object present in the environment, such as:
-* Acquisition and placement of new screenshot objects (which initially are just a local objects and are not on the cloud yet). The new objects are instantiated with the current position and rotation of the acquisition device exploiting a cartesian coordinates system (x,y,z) and a quaternion
-* Removal of one or more placed screenshot objects from the environment (useful to remove objects of which we are not satisfied before that these are hosted on the cloud)
-* Recreation and placement of old screenshot objects (which are retrieved from the cloud after the hosting procedure)
+* Acquisition and placement of new screenshot objects (which initially are just a local objects and are not on the cloud yet). The new objects are instantiated with the current position and rotation of the acquisition device exploiting a cartesian coordinates system (x,y,z) and a quaternion;
+* Removal of one or more placed screenshot objects from the environment (useful to remove objects of which we are not satisfied before that these are hosted on the cloud);
+* Recreation and placement of old screenshot objects (which are retrieved from the cloud after the hosting procedure);
 
 ### ARCloudAnchorManager
 The ARCloudAnchorManager class handles all the procedure with regards to hosting and resolution of the screenshot object on the cloud, such as:
-* First host, ...
-* Successive host
-* First resolution
-* Successive resolution
+* First hosting request, it happens when the hosting procedure is performed for the first time in a session (without retrieving the previous session), it effectively creates a new session overwriting the previous one;
+* Successive host, it happens all the times that a hosting procedure is performed after a previous hosting procedure, or after retrieving the prevous session. It allows to add elements to the current session on the cloud;
+* First resolution, it appens when the resolution procedure is performed for the first time in a session (without hosting any element), it effectively retrieves the previous session, allowing to visualize it and to update it adding new screenshot objects;
+* Successive resolution, it happens all the times that a hosting procedure is performed after a previous hosting procedure, or after retrieving the prevous session. It allows to add elements to the current session on the cloud;
 
 ### ARDebugManager, SaveManager and AnchrEntity
-The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally, allowing it to be retrieved in the next sessions or to be overwritten with a new one.
+The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally in a .Json file, allowing it to be retrieved in the next sessions or to be overwritten with a new one. [ADD WHAT REQUIRED ABOUT .JSON STORING]
 
 
 ## Detailed working of the application
