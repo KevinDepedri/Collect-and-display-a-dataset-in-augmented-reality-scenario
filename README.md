@@ -5,6 +5,7 @@
 **The project aims to the collection and visualization of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
 
 
+
 # Getting started
 ## Setup of the Unity Environment
 
@@ -16,6 +17,8 @@
 * -ARCore Extensions (link: ....)
 
 * Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`
+
+
 
 ## Build of the application
 
@@ -31,9 +34,30 @@
 
 
 
-
 # Description
-At the start the ARSession instantiates a cartesian coordinates system (x,y,z) with the origin in the position of the device's camera. A fourth value stored in a quaternion indicates the inclination of the ARcamera. These values will be used for the istantiation and retrieve of the anchors. <br/>The usage of the application is summarize in the following bullet list:
+The application is based in 2 main classes: ARPlacementManager and ARCloudAnchorManager, together with 3 minor classes ARDebugManager, SaveManager and AnchorEntity. 
+
+The ARPlacementManager class handles all the procedure with regards to the screenshot object present in the environment, such as:
+* Acquisition and placement of new screenshot objecta (which initially are just a local objects and are not on the cloud yet). The new objects are instantiated with the current position and rotation of the acquisition device exploiting a cartesian coordinates system (x,y,z) and a quaternion
+* Removal of one or more placed screenshot objects from the environment (useful to remove objects of which we are not satisfied before that these are hosted on the cloud)
+* Recreation and placement of old screenshot objects (which are retrieved from the cloud after the hosting procedure)
+
+The ARCloudAnchorManager class handles all the procedure with regards to hosting and resolution of the screenshot object on the cloud, such as:
+*
+*
+*
+*
+
+The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally, allowing it to be retrieved in the next sessions or to be overwritten with a new one.
+
+As the application starts, the user is require to scan the environment for at lest 15/30 seconds. This allow the SLAM algorithm to acquire some data from the current environment, and to build a feature map that will be used to position the anchors of the placed screenshoot objects. A longer scan allo
+After performing the scan of the environmente the user is able to 
+The application is based on a multiple list system which allows to have different list for local objects and cloud object. In this way the user is able to acquire the wanted screenshot locally, then to evaluate them and eventually to remove the not good ones and to acquire them again. Fianlly the users is able to host them when he is satisfied with the result.
+This system of multiple list allows also to handle any possible combinations of the host/remove/retrieve procedures, meaning that the user will be able to: start a session, take some screenshot, remove the bad ones and host the good ones, then add other elements to the previously hosted ones and so on.
+As we start the application it is always possible to retrieve the previous session pressing the button 'resolve anchors', in this way the previously acquired elements will be restored and from now moving on it will be possible to add new elements to that session.
+If we want to start a fresh new session then we need to start the application, acquire one or more screenshot, and only when we press the 'Host anchors' button then we will effectively overwrite the previous session with the current one.
+
+<br/>The usage of the application is summarize in the following bullet list:
 
 1) The first phase consists in scanning around the environment for at least 15 seconds;
 
@@ -47,6 +71,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
    - **Resolve anchor**: retrieve the anchors uploaded and place the holograms in the correct positions.
 
 <br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png)
+
 
 
 # Documentation and useful links
@@ -79,6 +104,7 @@ At the start the ARSession instantiates a cartesian coordinates system (x,y,z) w
 - [ ] Extension of the anchors survival time up to 365 days;
 
 - [ ] Training of neural networks (NeRF);
+
 
 
 # Contacts
