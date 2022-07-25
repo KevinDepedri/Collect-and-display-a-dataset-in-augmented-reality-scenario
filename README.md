@@ -78,19 +78,24 @@ After that the acquisition has been performed, the anchors have been hosted and 
 * If we want to `Retrieve the previous session` then we need to start the application and press the `Resolve Anchors button`, in this way the previously acquired elements will be restored and from now moving on it will be possible to add new elements to that pevious session.
 
 
-## Shorted working phase of the application
+## Summarized phase of the application
 <br/>The usage of the application is summarize in the following bullet list:
 
-1) The first phase consists in scanning around the environment for at least 15 seconds;
+1) The first phase consists in scanning around the environment for at least 15/30 seconds;
 
-2) After a tap on the screen the application takes a pic of the environment and creates an hologram with an anchor associated;
+2) After a tap on the screen the application takes a pic of the environment and creates an hologram with a local anchor associated;
 
-3) The hologram is visible through the device camera as a plane with the picture as texture. It is placed in the ARcamera's coordinates with the same inclination;
+3) The hologram is visible through the device camera as a plane with the picture as texture. It is placed in the ARcamera's coordinates with the same inclination and orientation;
 
 4) After having placed the holograms the user has three choices:
-   - **Host anchor**: upload the anchor points on a cloud;
+   - **Host anchor**: upload the anchor points on the cloud;
    - **Remove last object**: delete the last hologram created;
-   - **Resolve anchor**: retrieve the anchors uploaded and place the holograms in the correct positions.
+   - **Resolve anchor**: retrieve the anchors uploaded previously on the cloud and place the holograms in the correct positions.
+
+
+5) After closing and re-starting the application:
+   - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
+   - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
 <br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png)
 
