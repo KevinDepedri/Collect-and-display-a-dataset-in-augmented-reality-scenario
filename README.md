@@ -10,12 +10,12 @@
 
 * Install Unity editor 2021.3 or later versions;
 
-* Install all the following required packages from `Window -> Package Manager`:;
-* -AR Foundation;
-* -ARCore XR Plugin;
+* Install all the following required packages from `Window -> Package Manager`:
+* -AR Foundation
+* -ARCore XR Plugin
 * -ARCore Extensions (link: ....)
 
-* Connect to the ARCore Cloud Anchor API from 'Edit -> Project Settings -> XR Plug-in Management -> ARCore Extensions' by selecting the option 'API Key' from the drop-down menu 'Android Authentication Strategy' and pasting the following key 'AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI'.
+* Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions`: by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`
 
 ## Build of the application
 
