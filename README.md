@@ -16,7 +16,7 @@
    - **ARCore XR Plugin**;
    - **ARCore Extensions (link: ....)**;
 
-3) Connect to the ARCore Cloud Anchor API from  `Edit --> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`;
+3) Connect to the ARCore Cloud Anchor API from  `Edit -> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`;
 
 4) If the previous `API Key` does not work please follow this procedure to generate your own API Key: (link: .....);
 
@@ -24,7 +24,7 @@
 
 ## Build of the application
 
-* Download this repo and open the "Sample Scene" file or clone this repo from Unity;
+* Download this repo and open the "Sample Scene" file;
 
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
 
