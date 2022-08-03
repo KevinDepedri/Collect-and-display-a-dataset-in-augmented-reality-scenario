@@ -44,6 +44,11 @@ SLAM (Simultaneous Localization and Mapping) is an algorithm that allows a devic
 SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).
 Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
 
+### How SLAM works
+The entire working of SLAM can be broke down into Front-end data collection and Back-end data processing.
+The front-end data collection of SLAM is of two types Visual SLAM and LiDAR SLAM.
+Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. Visual SLAM can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
+
 
 ## Structure of the script
 The application is based in 2 main classes: ARPlacementManager and ARCloudAnchorManager, together with 3 minor classes ARDebugManager, SaveManager and AnchorEntity. 
