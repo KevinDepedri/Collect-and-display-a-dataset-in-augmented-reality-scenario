@@ -133,6 +133,8 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 * [Anchors and Raycasting](https://www.andreasjakl.com/ar-foundation-fundamentals-with-unity-part-3/)
 
+* [SLAM Algorithm](https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/)
+
 
 
 # Demo (GIFs or pictures)
