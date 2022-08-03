@@ -135,7 +135,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 * [SLAM Algorithm](https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/)
 
-* [SLAM ALgorithm (paper)]([https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/](https://link.springer.com/article/10.1186/s41074-017-0027-2))
+* [SLAM Algorithm (paper)](https://link.springer.com/article/10.1186/s41074-017-0027-2)
 
 
 
