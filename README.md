@@ -40,16 +40,19 @@
 
 ## Slam algorithm
 ### What is SLAM?
-SLAM (Simultaneous Localization and Mapping) is an algorithm that allows a device/robot to build its surrounding map and localize its location on the map at the same time.
-SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).
+SLAM (**Simultaneous Localization and Mapping**) is an algorithm that allows a device/robot to build its surrounding map and localize its location on the map at the same time.<br/>
+SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).<br/>
 Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
 
 ### How SLAM works
-The entire working of SLAM can be broke down into Front-end data collection and Back-end data processing.
-The front-end data collection of SLAM is of two types Visual SLAM and LiDAR SLAM.
-Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. Visual SLAM can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
+Most SLAM systems work by tracking set points through successive camera frames to triangulate their 3D position, while simultaneously using this information to approximate camera pose. Basically, the goal of these systems is to map their surroundings in relation to their own location for the purposes of navigation.
+The entire working of SLAM can be broke down into **Front-end data collection** and **Back-end data processing**.<br/>
+
+Fronte-end data collection
+The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
+Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
 A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
-Visual SLAM implementation is generally low cost as they use relatively inexpensive cameras. Additionally, cameras provide a large volume of information, they can be used to detect a landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
+Cameras provide a large volume of information, they can be used to detect a landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
 LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM which used cameras, lasers are more precise and accurate. The high rate of data capture with more precision allows LiDAR sensors for use in high-speed applications such as moving vehicles such as self-driving cars and drones.
 
 The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information.
