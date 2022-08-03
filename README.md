@@ -39,7 +39,7 @@
 # Description
 
 ## Slam algorithm
-###What is SLAM?
+### What is SLAM?
 SLAM (Simultaneous Localization and Mapping) is an algorithm that allows a device/robot to build its surrounding map and localize its location on the map at the same time.
 SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).
 Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
