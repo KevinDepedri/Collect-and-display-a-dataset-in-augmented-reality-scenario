@@ -4,6 +4,23 @@
 
 **The project aims to the collection and visualization of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
 
+# Table of contents
+
+* [SLAM Algorithm]
+
+* [Getting started](#Getting started)
+
+* [Description]
+
+* [Documentation and useful links]
+
+* [Demo]
+
+* [Future implementations]
+
+* [Contacts]
+
+
 
 
 # Getting started
