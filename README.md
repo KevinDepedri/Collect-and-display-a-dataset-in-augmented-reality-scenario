@@ -67,9 +67,11 @@ LiDAR point cloud matching generally requires high processing power, so it is ne
 
 Mathematically speaking the objective is to compute:<br/>
 
-![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/c607fe964e04d2d7c46f8420596205eb67737000)
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/c607fe964e04d2d7c46f8420596205eb67737000)<br/>
 with m mapping of the environment, x agent's state, u input controls, o sensor's observations.<br/>
-Using Bayes's rule and given a map and a transition function ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/18bc6b8abe9221154012d7bf365049d4755902e8)
+Using Bayes's rule and given a map and a transition function ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/18bc6b8abe9221154012d7bf365049d4755902e8) we can compute:<br/>
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)
+
 
 ## Structure of the script
 The application is based in 2 main classes: ARPlacementManager and ARCloudAnchorManager, together with 3 minor classes ARDebugManager, SaveManager and AnchorEntity. 
