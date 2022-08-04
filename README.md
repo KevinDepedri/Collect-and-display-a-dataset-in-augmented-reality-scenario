@@ -6,7 +6,7 @@
 
 # Table of contents
 
-* [SLAM Algorithm](##Slam-algorithm)
+* [SLAM Algorithm](#Slam-algorithm)
 
 * [Getting started](#Getting-started)
 
