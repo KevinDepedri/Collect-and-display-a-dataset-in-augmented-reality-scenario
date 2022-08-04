@@ -174,7 +174,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 
 
-# Demo (GIFs or pictures)
+# Demo
 
 ![this is an image](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/10addio.gif?raw=true)
 
