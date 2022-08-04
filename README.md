@@ -49,7 +49,7 @@ As per the details mentioned in the MATLAB website, Visual SLAM algorithms can b
 LiDAR point cloud matching generally requires high processing power, so it is necessary to optimize the processes to improve speed. Due to these challenges, localization for autonomous vehicles may involve fusing other measurement results such as wheel odometry, global navigation satellite system (GNSS), and IMU data. For applications such as warehouse robots, 2D LiDAR SLAM is commonly used, whereas SLAM using 3-D LiDAR point clouds can be used for UAVs and automated parking.<br/>
 
 Mathematically speaking given:<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environmente;<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environment;<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/f279a30bc8eabc788f3fe81c9cfb674e72e858db) -> agent's current state;<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/3cd2cf4bfdabc8ae396ce3fa32aeb871efb3d732) -> sensor's observation;<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffc45a5286dc4ff8b99c89d5fbf0c0b9760babf1) -> series of controls<br/>
