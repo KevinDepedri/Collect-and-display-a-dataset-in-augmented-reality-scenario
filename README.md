@@ -8,7 +8,7 @@
 
 * [SLAM Algorithm]
 
-* [Getting started](#Getting started)
+* [Getting started](#Getting-started)
 
 * [Description]
 
