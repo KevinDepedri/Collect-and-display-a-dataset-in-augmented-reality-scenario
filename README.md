@@ -70,7 +70,9 @@ Mathematically speaking the objective is to compute:<br/>
 ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/c607fe964e04d2d7c46f8420596205eb67737000)<br/>
 with m mapping of the environment, x agent's state, u input controls, o sensor's observations.<br/>
 Using Bayes's rule and given a map and a transition function ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/18bc6b8abe9221154012d7bf365049d4755902e8) we can compute:<br/>
-![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
+Similarly the map can be updated sequentially by:<br/>
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
 
 
 ## Structure of the script
