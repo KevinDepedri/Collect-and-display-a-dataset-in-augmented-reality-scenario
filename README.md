@@ -74,7 +74,7 @@ Mathematically speaking given:<br/>
 the objective is to compute:<br/>
 
 ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20m_%7Bt&plus;1%7D%2C%20x_%7Bt&plus;1%7D%20%5Cright%20%7Co_%7B1%3At&plus;1%7D%2Cu_%7B1%3At%7D%20%29)<br/>
-<br/>Using Bayes's rule and given a map and a transition function ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/18bc6b8abe9221154012d7bf365049d4755902e8) we can compute:<br/>
+<br/>Using Bayes's rule and given a map and a transition function ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20x_%7Bt%7D%20%5Cright%20%7Cx_%7Bt&plus;1%7D%29) we can compute:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
 Similarly the map can be updated sequentially by:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
