@@ -35,7 +35,7 @@ The entire working of SLAM can be broke down into **Front-end data collection** 
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
 Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
 A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
-Cameras provide a large volume of information, they can be used to detect a landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
+Cameras provide a large volume of information, they can be used to detect landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
 LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM which used cameras, lasers are more precise and accurate. The high rate of data capture with more precision allows LiDAR sensors for use in high-speed applications such as moving vehicles such as self-driving cars and drones.
 
 The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information.
