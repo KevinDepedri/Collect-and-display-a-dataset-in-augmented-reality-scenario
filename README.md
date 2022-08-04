@@ -48,7 +48,7 @@ Together these sensors collect data and build a picture of the surrounding envir
 Most SLAM systems work by tracking set points through successive camera frames to triangulate their 3D position, while simultaneously using this information to approximate camera pose. Basically, the goal of these systems is to map their surroundings in relation to their own location for the purposes of navigation.
 The entire working of SLAM can be broke down into **Front-end data collection** and **Back-end data processing**.<br/>
 
-Fronte-end data collection<br/>
+### Front-end data collection<br/>
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
 Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
 A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
@@ -59,7 +59,7 @@ The output data of LiDAR sensors often called as point cloud data is available w
 
 The laser sensor point cloud provides high-precision distance measurements, and works very effectively for map construction with SLAM. Generally, movement is estimated sequentially by matching the point clouds. The calculated movement (travelled distance) is used for localizing the vehicle. For LiDAR point cloud matching, iterative closest point (ICP) and normal distributions transform (NDT) algorithms are used. 2D or 3D point cloud maps can be represented as a grid map or voxel map.
 
-Back-end data processing
+### Back-end data processing
 
 As per the details mentioned in the MATLAB website, Visual SLAM algorithms can be broadly classified into two categories Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM. Dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
 
