@@ -182,6 +182,6 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 
 # Contacts
-Giovanni Ambrosi - (giovanni.ambrosi@studenti.unitn.it) -
+Giovanni Ambrosi - (giovanni.ambrosi@studenti.unitn.it)
 
-Kevin Depedri - (kevin.depedri@studenti.unitn.it) -
+Kevin Depedri - (kevin.depedri@studenti.unitn.it)
