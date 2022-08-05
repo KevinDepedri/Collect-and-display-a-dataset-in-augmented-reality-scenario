@@ -30,7 +30,21 @@ The coupling between these two tasks, initially considered as the core issue, wa
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from micro aerial vehicles to augmented reality (AR) on a smartphone.
 SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).<br/>
 Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
-Visual SLAM (vSLAM) using solely cameras and visual-inertial SLAM (viSLAM) using inertial measurement units (IMUs) give a good illustration of these new SLAM strategies.
+Visual SLAM (vSLAM) using solely cameras and visual-inertial SLAM (viSLAM) using inertial measurement units (IMUs) give a good illustration of these new SLAM strategies.<br/>
+
+Mathematically speaking given:<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environment;<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/f279a30bc8eabc788f3fe81c9cfb674e72e858db) -> agent's current state;<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/3cd2cf4bfdabc8ae396ce3fa32aeb871efb3d732) -> sensor's observation;<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffc45a5286dc4ff8b99c89d5fbf0c0b9760babf1) -> series of controls<br/>
+
+the objective is to compute:<br/>
+
+![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20m_%7Bt&plus;1%7D%2C%20x_%7Bt&plus;1%7D%20%5Cright%20%7Co_%7B1%3At&plus;1%7D%2Cu_%7B1%3At%7D%20%29)<br/>
+<br/>Using Bayes's rule and given a map and a transition function ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20x_%7Bt%7D%20%5Cright%20%7Cx_%7Bt&plus;1%7D%29) we can compute:<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
+Similarly the map can be updated sequentially by:<br/>
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
 
 # Getting started
 ## Setup of the Unity Environment
