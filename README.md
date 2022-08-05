@@ -40,7 +40,7 @@ Mathematically speaking given:<br/>
 
 the objective is to compute:<br/>
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20m_%7Bt&plus;1%7D%2C%20x_%7Bt&plus;1%7D%20%5Cright%20%7Co_%7B1%3At&plus;1%7D%2Cu_%7B1%3At%7D%20%29)<br/>
+![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/c607fe964e04d2d7c46f8420596205eb67737000)<br/>
 <br/>Using Bayes's rule and given a map and a transition function ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20x_%7Bt%7D%20%5Cright%20%7Cx_%7Bt&plus;1%7D%29) we can compute:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
 Similarly the map can be updated sequentially by:<br/>
