@@ -26,11 +26,12 @@
 
 SLAM (**Simultaneous Localization and Mapping**) is an algorithm born in the 80s.
 Its goal is to obtain a global and consistent estimate of a device’s path while reconstructing a map of the surrounding environment. 
-The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods. 
-This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from micro aerial vehicles to augmented reality (AR) on a smartphone.
-SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).<br/>
-Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
-Visual SLAM (vSLAM) using solely cameras and visual-inertial SLAM (viSLAM) using inertial measurement units (IMUs) give a good illustration of these new SLAM strategies.<br/>
+The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods.<br/> 
+This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.
+**SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU)**.<br/>
+Together these sensors collect data and build a picture of the surrounding environment and along woth the SLAM algorithm estimate the location and position within the surrounding environment.
+Moreover SLAM algorithms use two main designs. The first design corresponds to filter-based solutions (Extended Kalman filter or particle filters), the second design utilizes parallel methods derived from PTAM (Parallel Tracking and Mapping). 
+In this project we have focused mainly on visual-inertial SLAM (viSLAM) an evolution of visual SLAM (vSLAM) tecniques.
 
 Mathematically speaking given:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environment;<br/>
@@ -44,7 +45,9 @@ the objective is to compute:<br/>
 <br/>Using Bayes's rule and given a map and a transition function ![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/18bc6b8abe9221154012d7bf365049d4755902e8) we can compute:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
 Similarly the map can be updated sequentially by:<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
+<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)<br/>
+
+In the following we will introduce the main principles of vSLAM and viSLAM.<br/>
 
 ## Classical Structure of vSLAM
 Four main blocks describe the overall operation of any vSLAM algorithm. They are the following:
@@ -56,12 +59,16 @@ Four main blocks describe the overall operation of any vSLAM algorithm. They are
 ![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)<br/><br/><br/>
 
 ## From vSLAM to viSLAM
-As said in the prevoius rows viSLAM methods use IMU in order to establish the current position and camera pose.
-Direct and indirect features could be used to classify viSLAM methods. Other reviews have also classified viSLAM methods depending on whether they are filter- or optimization-based methods. But most major viSLAM methods are actually feature-based methods and viSLAM mainly deals with hybridization issues. Therefore, the classification shown in Figure 5 is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.<br/><br/><br/>
+As said in the prevoius rows viSLAM (and vSLAM too) methods use IMU in order to establish the current position and camera pose.
+Direct and indirect features could be used to classify viSLAM methods. Some reviews have also classified viSLAM methods depending on whether they are filter or optimization-based methods. But most major viSLAM methods are actually feature-based methods and viSLAM mainly deals with hybridization issues. Therefore, the classification shown in Figure below is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.<br/><br/><br/>
 
 ![image_2](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.003.svgz)<br/><br/><br/>
 
+### Loose coupling
+
 Loosely coupled methods process the IMU and image measurements separately and use both information to track the pose. Weiss et al. [54] process images to compute VO between consecutive poses and subsequently fuse the latter with inertial measurements. IMU measurements can also be filtered to estimate rotations that are fused in an image-based estimation algorithm. Loosely coupled visual-inertial odometry method is one part of the global multisensor fusion (magnetometers, pressure altimeters, GPS receiver, laser scanners, …) addressed by in 2014. Although the interest for visual-inertial systems is quite recent, works on loosely coupled IMU-camera fusion started already in the early 2000s. SOFT-SLAM algorithm is a loosely coupled viSLAM method that in fact uses IMU data to reduce computation time when available. It builds in real time a dense map and runs on a MAV.<br/><br/>
+### Tight coupling
+
 Instead of fusing the outputs of vision- and inertial-based algorithms, tightly coupled methods fuse directly visual and inertial raw data to improve accuracy and robustness. The MSCKF [25] and MSCKF 2.0 [24], both robust and very light, belong to this category, along with ROVIO [26], which is an EKF-based direct VIO method. Open Keyframe-Based Visual Inertial System (OKVIS) [73] and S-MSCKF [17] are famous stereo VIO methods, while Vins-Mono [74] is a real viSLAM and not just a VIO method. Kimera [60] is also based on a VIO method but it also includes a pose graph optimizer, in different threads, for global trajectory estimation, a 3D mesh reconstruction module, and a 3D metric-semantic reconstruction module. VIORB [75] is based on ORB-SLAM [76]. Its front-end extracts feature with ORB while its back-end runs graph optimization. But its main interest lies in a new IMU initialization method that first estimates the gyroscope’s bias, approximates the scale and the gravity (without considering accelerometer bias), and then estimates the accelerometer bias (with scale and gravity direction refinement) and finally the velocity vector. It includes global optimization and loop closure in parallel methods. Most of the recent viSLAM methods are tightly coupled [15], as the one presented by [77] that uses forward and backward optical flow to tack image features.
 # Getting started
 ## Setup of the Unity Environment
