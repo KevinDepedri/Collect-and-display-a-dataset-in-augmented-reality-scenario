@@ -53,7 +53,7 @@ Four main blocks describe the overall operation of any vSLAM algorithm. They are
 * ***Mapping***: adding a landmark to the map
 * ***Loop closing***: producing a proper map and drift-free localization<br/><br/><br/>
 
-![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)
+![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)<br/><br/><br/>
 
 ## From vSLAM to viSLAM
 As said in the prevoius rows viSLAM methods use IMU in order to establish the current position.
