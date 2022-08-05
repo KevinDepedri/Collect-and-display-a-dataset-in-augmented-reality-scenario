@@ -48,10 +48,10 @@ Similarly the map can be updated sequentially by:<br/>
 
 ## Classical Structure of vSLAM
 Four main blocks (Figure 2) describe the overall operation of any vSLAM algorithm. They are the following:
-* Input search: finding the required information in the sensor measurements
-* Pose tracking: determining the current camera pose from the new perceptions
-* Mapping: adding a landmark to the map
-* Loop closing: producing a proper map and drift-free localization<br/>
+* ***Input search***: finding the required information in the sensor measurements
+* ***Pose tracking***: determining the current camera pose from the new perceptions
+* ***Mapping***: adding a landmark to the map
+* ***Loop closing***: producing a proper map and drift-free localization<br/>
 
 From vSLAM to viSLAM
 As said in the prevoius rows viSLAM methods use IMU in order to establish the current position.
