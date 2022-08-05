@@ -53,7 +53,7 @@ Four main blocks (Figure 2) describe the overall operation of any vSLAM algorith
 * ***Mapping***: adding a landmark to the map
 * ***Loop closing***: producing a proper map and drift-free localization<br/>
 
-From vSLAM to viSLAM
+## From vSLAM to viSLAM
 As said in the prevoius rows viSLAM methods use IMU in order to establish the current position.
 irect and indirect features could be used to classify viSLAM methods. Other reviews have also classified viSLAM methods depending on whether they are filter- or optimization-based methods [15]. But most major viSLAM methods are actually feature-based methods and viSLAM mainly deals with hybridization issues. Therefore, the classification shown in Figure 5 is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.
 
