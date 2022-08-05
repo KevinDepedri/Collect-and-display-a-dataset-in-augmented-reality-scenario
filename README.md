@@ -61,6 +61,7 @@ irect and indirect features could be used to classify viSLAM methods. Other revi
 
 ![image_2](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.003.svgz)<br/><br/><br/>
 
+Loosely coupled methods process the IMU and image measurements separately and use both information to track the pose. Weiss et al. [54] process images to compute VO between consecutive poses and subsequently fuse the latter with inertial measurements. IMU measurements can also be filtered to estimate rotations that are fused in an image-based estimation algorithm. Loosely coupled visual-inertial odometry method is one part of the global multisensor fusion (magnetometers, pressure altimeters, GPS receiver, laser scanners, …) addressed by in 2014. Although the interest for visual-inertial systems is quite recent, works on loosely coupled IMU-camera fusion started already in the early 2000s. SOFT-SLAM algorithm is a loosely coupled viSLAM method that in fact uses IMU data to reduce computation time when available. It builds in real time a dense map and runs on a MAV.
 # Getting started
 ## Setup of the Unity Environment
 
