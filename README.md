@@ -22,11 +22,15 @@
 
 # SLAM Algorithm
 
+## Introduction
+
 SLAM (**Simultaneous Localization and Mapping**) is an algorithm born in the 80s.
 Its goal is to obtain a global and consistent estimate of a device’s path while reconstructing a map of the surrounding environment. 
 The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods. 
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from micro aerial vehicles to augmented reality (AR) on a smartphone.
-
+SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).<br/>
+Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
+Visual SLAM (vSLAM) using solely cameras and visual-inertial SLAM (viSLAM) using inertial measurement units (IMUs) give a good illustration of these new SLAM strategies.
 
 # Getting started
 ## Setup of the Unity Environment
