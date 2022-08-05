@@ -20,48 +20,12 @@
 
 * [Contacts](#Contacts)
 
+# SLAM Algorithm
 
-# SLAM algorithm
-## What is SLAM?
-SLAM (**Simultaneous Localization and Mapping**) is an algorithm that allows a device/robot to build its surrounding map and localize its location on the map at the same time.<br/>
-SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU).<br/>
-Together these sensors collect data and build a picture of the surrounding environment. The SLAM algorithm helps to best estimate the location/position within the surrounding environment.
-
-## How SLAM works
-Most SLAM systems work by tracking set points through successive camera frames to triangulate their 3D position, while simultaneously using this information to approximate camera pose. Basically, the goal of these systems is to map their surroundings in relation to their own location for the purposes of navigation.
-The entire working of SLAM can be broke down into **Front-end data collection** and **Back-end data processing**.<br/>
-
-### Front-end data collection<br/>
-The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
-Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
-A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
-Cameras provide a large volume of information, they can be used to detect landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
-LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM which used cameras, lasers are more precise and accurate. The high rate of data capture with more precision allows LiDAR sensors for use in high-speed applications such as moving vehicles such as self-driving cars and drones.
-
-The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information.
-
-The laser sensor point cloud provides high-precision distance measurements, and works very effectively for map construction with SLAM. Generally, movement is estimated sequentially by matching the point clouds. The calculated movement (travelled distance) is used for localizing the vehicle. For LiDAR point cloud matching, iterative closest point (ICP) and normal distributions transform (NDT) algorithms are used. 2D or 3D point cloud maps can be represented as a grid map or voxel map.
-
-### Back-end data processing
-
-Visual SLAM algorithms can be broadly classified into two categories Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM. Dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
-
-LiDAR point cloud matching generally requires high processing power, so it is necessary to optimize the processes to improve speed. Due to these challenges, localization for autonomous vehicles may involve fusing other measurement results such as wheel odometry, global navigation satellite system (GNSS), and IMU data. For applications such as warehouse robots, 2D LiDAR SLAM is commonly used, whereas SLAM using 3-D LiDAR point clouds can be used for UAVs and automated parking.<br/>
-
-Mathematically speaking given:<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environment;<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/f279a30bc8eabc788f3fe81c9cfb674e72e858db) -> agent's current state;<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/3cd2cf4bfdabc8ae396ce3fa32aeb871efb3d732) -> sensor's observation;<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/ffc45a5286dc4ff8b99c89d5fbf0c0b9760babf1) -> series of controls<br/>
-
-the objective is to compute:<br/>
-
-![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20m_%7Bt&plus;1%7D%2C%20x_%7Bt&plus;1%7D%20%5Cright%20%7Co_%7B1%3At&plus;1%7D%2Cu_%7B1%3At%7D%20%29)<br/>
-<br/>Using Bayes's rule and given a map and a transition function ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5Cleft%20%28%20x_%7Bt%7D%20%5Cright%20%7Cx_%7Bt&plus;1%7D%29) we can compute:<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/a9af46b0bc5e00ee32f838783ee48004379e32a0)<br/>
-Similarly the map can be updated sequentially by:<br/>
-<br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
-
+SLAM (**Simultaneous Localization and Mapping**) is an algorithm born in the 80s.
+Its goal is to obtain a global and consistent estimate of a device’s path while reconstructing a map of the surrounding environment. 
+The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods. 
+This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from micro aerial vehicles to augmented reality (AR) on a smartphone.
 
 
 # Getting started
