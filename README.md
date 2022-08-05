@@ -173,6 +173,8 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 * [SLAM Algorithm (paper)](https://link.springer.com/article/10.1186/s41074-017-0027-2)
 
+* [Weiss et al.](https://ieeexplore.ieee.org/document/6225147)
+
 
 
 # Demo
