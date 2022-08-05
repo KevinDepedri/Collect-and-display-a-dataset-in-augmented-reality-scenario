@@ -51,9 +51,8 @@ Four main blocks describe the overall operation of any vSLAM algorithm. They are
 * ***Input search***: finding the required information in the sensor measurements
 * ***Pose tracking***: determining the current camera pose from the new perceptions
 * ***Mapping***: adding a landmark to the map
-* ***Loop closing***: producing a proper map and drift-free localization<br/>
-<br/>
-<br/>
+* ***Loop closing***: producing a proper map and drift-free localization<br/><br/><br/>
+
 ![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)
 
 ## From vSLAM to viSLAM
