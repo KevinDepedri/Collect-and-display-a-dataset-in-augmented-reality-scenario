@@ -47,15 +47,17 @@ Similarly the map can be updated sequentially by:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)
 
 ## Classical Structure of vSLAM
-Four main blocks (Figure 2) describe the overall operation of any vSLAM algorithm. They are the following:
+Four main blocks describe the overall operation of any vSLAM algorithm. They are the following:
 * ***Input search***: finding the required information in the sensor measurements
 * ***Pose tracking***: determining the current camera pose from the new perceptions
 * ***Mapping***: adding a landmark to the map
 * ***Loop closing***: producing a proper map and drift-free localization<br/>
 
+![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)
+
 ## From vSLAM to viSLAM
 As said in the prevoius rows viSLAM methods use IMU in order to establish the current position.
-irect and indirect features could be used to classify viSLAM methods. Other reviews have also classified viSLAM methods depending on whether they are filter- or optimization-based methods [15]. But most major viSLAM methods are actually feature-based methods and viSLAM mainly deals with hybridization issues. Therefore, the classification shown in Figure 5 is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.
+irect and indirect features could be used to classify viSLAM methods. Other reviews have also classified viSLAM methods depending on whether they are filter- or optimization-based methods. But most major viSLAM methods are actually feature-based methods and viSLAM mainly deals with hybridization issues. Therefore, the classification shown in Figure 5 is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.
 
 
 # Getting started
