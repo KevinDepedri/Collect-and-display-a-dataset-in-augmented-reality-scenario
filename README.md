@@ -66,10 +66,10 @@ Direct and indirect features could be used to classify viSLAM methods. Some revi
 
 ### Loose coupling
 
-Loosely coupled methods process the IMU and image measurements separately and use both information to track the pose. Weiss et al. [54] process images to compute VO between consecutive poses and subsequently fuse the latter with inertial measurements. IMU measurements can also be filtered to estimate rotations that are fused in an image-based estimation algorithm. Loosely coupled visual-inertial odometry method is one part of the global multisensor fusion (magnetometers, pressure altimeters, GPS receiver, laser scanners, …) addressed by in 2014. Although the interest for visual-inertial systems is quite recent, works on loosely coupled IMU-camera fusion started already in the early 2000s. SOFT-SLAM algorithm is a loosely coupled viSLAM method that in fact uses IMU data to reduce computation time when available. It builds in real time a dense map and runs on a MAV.<br/><br/>
+Loosely coupled methods process the IMU and image measurements separately and use both information to track the pose. IMU measurements can also be filtered to estimate rotations that are fused in an image-based estimation algorithm. Loosely coupled visual-inertial odometry method is one part of the global multisensor fusion (magnetometers, pressure altimeters, GPS receiver, laser scanners, …). Although the interest for visual-inertial systems is quite recent, works on loosely coupled IMU-camera fusion started already in the early 2000s. SOFT-SLAM algorithm is a loosely coupled viSLAM method that in fact uses IMU data to reduce computation time when available. It builds in real time a dense map and runs on a MAV.<br/><br/>
 ### Tight coupling
 
-Instead of fusing the outputs of vision- and inertial-based algorithms, tightly coupled methods fuse directly visual and inertial raw data to improve accuracy and robustness. The MSCKF [25] and MSCKF 2.0 [24], both robust and very light, belong to this category, along with ROVIO [26], which is an EKF-based direct VIO method. Open Keyframe-Based Visual Inertial System (OKVIS) [73] and S-MSCKF [17] are famous stereo VIO methods, while Vins-Mono [74] is a real viSLAM and not just a VIO method. Kimera [60] is also based on a VIO method but it also includes a pose graph optimizer, in different threads, for global trajectory estimation, a 3D mesh reconstruction module, and a 3D metric-semantic reconstruction module. VIORB [75] is based on ORB-SLAM [76]. Its front-end extracts feature with ORB while its back-end runs graph optimization. But its main interest lies in a new IMU initialization method that first estimates the gyroscope’s bias, approximates the scale and the gravity (without considering accelerometer bias), and then estimates the accelerometer bias (with scale and gravity direction refinement) and finally the velocity vector. It includes global optimization and loop closure in parallel methods. Most of the recent viSLAM methods are tightly coupled [15], as the one presented by [77] that uses forward and backward optical flow to tack image features.
+Instead of fusing the outputs of vision and inertial-based algorithms, tightly coupled methods fuse directly visual and inertial raw data to improve accuracy and robustness. The MSCKF and MSCKF 2.0, both robust and very light, belong to this category, along with ROVIO, which is an EKF-based direct VIO method. Kimera [60] is also based on a VIO method but it also includes a pose graph optimizer, in different threads, for global trajectory estimation, a 3D mesh reconstruction module, and a 3D metric-semantic reconstruction module. Its front-end extracts feature with ORB while its back-end runs graph optimization. But its main interest lies in a new IMU initialization method that first estimates the gyroscope’s bias, approximates the scale and the gravity (without considering accelerometer bias), and then estimates the accelerometer bias (with scale and gravity direction refinement) and finally the velocity vector. It includes global optimization and loop closure in parallel methods. Most of the recent viSLAM methods are tightly coupled, as the one presented by that uses forward and backward optical flow to tack image features.
 # Getting started
 ## Setup of the Unity Environment
 
@@ -178,9 +178,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 * [SLAM Algorithm](https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/)
 
-* [SLAM Algorithm (paper)](https://link.springer.com/article/10.1186/s41074-017-0027-2)
-
-* [Weiss et al.](https://ieeexplore.ieee.org/document/6225147)
+* [vSLAM and viSLAM methods)](https://www.hindawi.com/journals/js/2021/2054828/)
 
 
 
