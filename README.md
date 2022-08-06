@@ -38,7 +38,7 @@ A SLAM algorithm is composed of two phases: **front-end data collection** and **
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
 **Visual SLAM (vSLAM) uses simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras) to collect data**.
 Cameras provide a large volume of information, they can be used i.e. to detect landmarks which can be combined with graph-based optimization, achieving flexibility in SLAM implementation.<br/>
-LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM, lasers are more precise and accurate. 
+LiDAR SLAM implementation uses a laser sensor. Compared to Visual SLAM, lasers are more precise and accurate. 
 The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information and the movement is estimated sequentially by matching the point clouds. The calculated movement (travelled distance) is used for localizing i.e a vehicle. For LiDAR point cloud matching, iterative closest point (ICP) and normal distributions transform (NDT) algorithms are used.
 
 ### Back-end data processing
