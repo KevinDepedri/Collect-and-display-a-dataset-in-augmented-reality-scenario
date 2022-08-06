@@ -98,7 +98,7 @@ according to image processing; the front-end is responsible for map construction
 back-end is responsible for pose optimization. Back-end optimization techniques are usually
 implemented on g2o, ceres-solver, and gtsam. Many excellent datasets can be used to
 study visual-inertial methods, such as EuRoC, Canoe, Zurich urban MAV, TUM VI
-Benchmark, and PennCOSYVIO.
+Benchmark, and PennCOSYVIO. Examples of Optimization-Based Methods are Loop Closure, Okvis, VIORB (based on ORB-SLAM)
 
 # Getting started
 ## Setup of the Unity Environment
