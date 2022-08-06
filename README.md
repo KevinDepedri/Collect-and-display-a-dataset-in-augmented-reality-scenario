@@ -75,10 +75,13 @@ Four main blocks describe the overall operation of any vSLAM algorithm. They are
 ![image_1](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.002.svgz)<br/><br/><br/>
 
 ## From vSLAM to viSLAM
-viSLAM (visual intertial SLAM) methods use IMU in order to establish the current position and camera pose.
-Direct and indirect features could be used to classify viSLAM methods. Some reviews have also classified them depending on whether they are filter or optimization-based methods. But most major viSLAM methods are actually feature-based methods and they mainly deal with hybridization issues. Therefore, the classification shown in figure below is based on the coupling level of the visual and inertial data. We differentiate two levels: loose and tight coupling.<br/><br/><br/>
-
-![image_2](https://static-02.hindawi.com/articles/js/volume-2021/2054828/figures/2054828.fig.003.svgz)<br/><br/><br/>
+Visual-inertial simultaneous localization and mapping (VI-SLAM) that fuses camera and IMU
+data for localization and environmental perception has become increasingly popular for several
+reasons. First, the technology is used in robotics, especially in extensive research and applications
+involving the autonomous navigation of micro aerial vehicles (MAV). Second, augmented reality
+(AR) and virtual reality (VR) are growing rapidly. Third, unmanned technology and artificial
+intelligence has expanded tremendously.
+VI-SLAM is generally divided into two approaches: **filtering-based** and **optimization-based**.
 
 
 # Getting started
