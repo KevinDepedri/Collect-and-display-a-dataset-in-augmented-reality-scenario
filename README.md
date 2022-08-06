@@ -130,6 +130,8 @@ Benchmark, and PennCOSYVIO. Examples of Optimization-Based Methods are Loop Clos
 
 * Choose your device from the `Run Device` section;
 
+* Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness, check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
+
 * Click `Build and Run`;
 
 
