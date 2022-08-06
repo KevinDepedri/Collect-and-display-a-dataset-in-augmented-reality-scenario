@@ -44,12 +44,12 @@ The laser sensor point cloud provides high-precision distance measurements, and 
 
 ### Back-end data processing
 
-Visual SLAM algorithms can be broadly classified into two categories, **sparse methods** and **Dense methods**<br/>
-Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM. Dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
+Visual SLAM algorithms can be broadly classified into two categories, **sparse methods** and **dense methods**<br/>
+Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM while dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
 
 LiDAR point cloud matching generally requires high processing power, so it is necessary to optimize the processes to improve speed. Due to these challenges, localization for autonomous vehicles may involve fusing other measurement results such as wheel odometry, global navigation satellite system (GNSS), and IMU data. For applications such as warehouse robots, 2D LiDAR SLAM is commonly used, whereas SLAM using 3-D LiDAR point clouds can be used for UAVs and automated parking.<br/>
 
-
+### Mathematical theory
 Mathematically speaking given:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15cd7daffb06c3fa7898e10fe16953895cb3a369) -> map of the environment;<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/f279a30bc8eabc788f3fe81c9cfb674e72e858db) -> agent's current state;<br/>
