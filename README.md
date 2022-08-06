@@ -33,6 +33,8 @@ Together these sensors collect data and build a picture of the surrounding envir
 Moreover SLAM algorithms use two main designs. The first design corresponds to filter-based solutions (Extended Kalman filter or particle filters), the second design utilizes parallel methods derived from PTAM (Parallel Tracking and Mapping). 
 In this project we have focused mainly on visual-inertial SLAM (viSLAM) an evolution of visual SLAM (vSLAM) tecniques.
 
+### Front-end data collection
+
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
 Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
 A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
