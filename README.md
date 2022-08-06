@@ -36,8 +36,8 @@ A SLAM algorithm is composed of two phases: **front-end data collection** and **
 ### Front-end data collection
 
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
-Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
-Cameras provide a large volume of information, they can be used to detect landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
+**Visual SLAM (vSLAM) uses simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras) to collect data**.
+Cameras provide a large volume of information, they can be used i.e. to detect landmarks which can be combined with graph-based optimization, achieving flexibility in SLAM implementation.
 LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM which used cameras, lasers are more precise and accurate. The high rate of data capture with more precision allows LiDAR sensors for use in high-speed applications such as moving vehicles such as self-driving cars and drones.
 The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information.
 The laser sensor point cloud provides high-precision distance measurements, and works very effectively for map construction with SLAM. Generally, movement is estimated sequentially by matching the point clouds. The calculated movement (travelled distance) is used for localizing the vehicle. For LiDAR point cloud matching, iterative closest point (ICP) and normal distributions transform (NDT) algorithms are used. 2D or 3D point cloud maps can be represented as a grid map or voxel map.
