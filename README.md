@@ -81,8 +81,24 @@ reasons. First, the technology is used in robotics, especially in extensive rese
 involving the autonomous navigation of micro aerial vehicles (MAV). Second, augmented reality
 (AR) and virtual reality (VR) are growing rapidly. Third, unmanned technology and artificial
 intelligence has expanded tremendously.
-VI-SLAM is generally divided into two approaches: **filtering-based** and **optimization-based**.
+VI-SLAM is generally divided into two approaches: **filtering-based** and **optimization-based**.<br/> 
 
+### Filtering-Based Methods
+The filthering-based methods are divided into two categories: loosely coupled method and tightly coupled method.<br/> The loosely coupled
+method usually only fuses the IMU to estimate the orientation and possible the change in
+position, but not the full pose. In contrast, the tightly coupled method fuses the state of the
+camera and IMU together into a motion and observation equation, and then performs state estimation.
+Tightly coupled methods presently constitute the main research focus, thanks to advances in
+computer technology.
+
+### Optimization-Based Methods
+With the development of computer technology, optimization-based VI-SLAM has proliferated
+rapidly. Optimization-based methods divide the entire SLAM frame into a front-end and back-end
+according to image processing; the front-end is responsible for map construction, whereas the
+back-end is responsible for pose optimization. Back-end optimization techniques are usually
+implemented on g2o, ceres-solver, and gtsam. Many excellent datasets can be used to
+study visual-inertial methods, such as EuRoC, Canoe, Zurich urban MAV, TUM VI
+Benchmark, and PennCOSYVIO.
 
 # Getting started
 ## Setup of the Unity Environment
