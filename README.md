@@ -31,23 +31,21 @@ This duality has also encouraged its diversification. By dosing the importance g
 **SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU)**.<br/>
 Together these sensors collect data and build a picture of the surrounding environment and along woth the SLAM algorithm estimate the location and position within the surrounding environment.
 Moreover SLAM algorithms use two main designs. The first design corresponds to filter-based solutions (Extended Kalman filter or particle filters), the second design utilizes parallel methods derived from PTAM (Parallel Tracking and Mapping). 
-A SLAM procedure is composed of two phases: front-end data collection and back-end data processing
+A SLAM algorithm is composed of two phases: **front-end data collection** and **back-end data processing**
 
 ### Front-end data collection
 
 The front-end data collection of SLAM is of two types: Visual SLAM and LiDAR SLAM.
 Visual SLAM (vSLAM) uses camera to acquire or collect imagery of the surrounding. It can use simple cameras (360 degree panoramic, wide angle and fish-eye camera), compound eye cameras (stereo and multi cameras), and RGB-D cameras (depth and Time-of-Flight cameras).
-A ToF (time-of-flight) camera is a range imaging camera system that employs time-of-flight techniques to resolve distance between the camera and the subject for each point of the image, by measuring the round trip time of an artificial light signal provided by a laser or an LED.
 Cameras provide a large volume of information, they can be used to detect landmarks (previously measured positions). Landmark detection can also be combined with graph-based optimization, achieving flexibility in SLAM implementation.
 LiDAR SLAM implementation uses a laser sensor. Compare to Visual SLAM which used cameras, lasers are more precise and accurate. The high rate of data capture with more precision allows LiDAR sensors for use in high-speed applications such as moving vehicles such as self-driving cars and drones.
-
 The output data of LiDAR sensors often called as point cloud data is available with 2D (x, y) or 3D (x, y, z) positional information.
-
 The laser sensor point cloud provides high-precision distance measurements, and works very effectively for map construction with SLAM. Generally, movement is estimated sequentially by matching the point clouds. The calculated movement (travelled distance) is used for localizing the vehicle. For LiDAR point cloud matching, iterative closest point (ICP) and normal distributions transform (NDT) algorithms are used. 2D or 3D point cloud maps can be represented as a grid map or voxel map.
 
 ### Back-end data processing
 
-Visual SLAM algorithms can be broadly classified into two categories Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM. Dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
+Visual SLAM algorithms can be broadly classified into two categories, **sparse methods** and **Dense methods**<br/>
+Sparse methods match feature points of images and use algorithms such as PTAM and ORB-SLAM. Dense methods use the overall brightness of images and use algorithms such as DTAM, LSD-SLAM, DSO, and SVO.
 
 LiDAR point cloud matching generally requires high processing power, so it is necessary to optimize the processes to improve speed. Due to these challenges, localization for autonomous vehicles may involve fusing other measurement results such as wheel odometry, global navigation satellite system (GNSS), and IMU data. For applications such as warehouse robots, 2D LiDAR SLAM is commonly used, whereas SLAM using 3-D LiDAR point clouds can be used for UAVs and automated parking.<br/>
 
