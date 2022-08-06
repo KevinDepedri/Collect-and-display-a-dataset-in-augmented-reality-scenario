@@ -190,7 +190,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 * [SLAM Algorithm](https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/)
 
-* [vSLAM and viSLAM methods)](https://www.hindawi.com/journals/js/2021/2054828/)
+* [vSLAM and viSLAM methods](https://www.hindawi.com/journals/js/2021/2054828/)
 
 
 
