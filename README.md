@@ -31,7 +31,7 @@ This duality has also encouraged its diversification. By dosing the importance g
 **SLAM uses devices/sensors to collects visible data (camera) and/or non-visible data (RADAR, SONAR, LiDAR) with basic positional data collected using Inertial Measurement Unit (IMU)**.<br/>
 Together these sensors collect data and build a picture of the surrounding environment and along woth the SLAM algorithm estimate the location and position within the surrounding environment.
 Moreover SLAM algorithms use two main designs. The first design corresponds to filter-based solutions (Extended Kalman filter or particle filters), the second design utilizes parallel methods derived from PTAM (Parallel Tracking and Mapping). 
-In this project we have focused mainly on visual-inertial SLAM (viSLAM) an evolution of visual SLAM (vSLAM) tecniques.
+A SLAM procedure is composed of two phases: front-end data collection and back-end data processing
 
 ### Front-end data collection
 
@@ -66,7 +66,7 @@ the objective is to compute:<br/>
 Similarly the map can be updated sequentially by:<br/>
 <br/>![equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/15a2717a2788d8cb12aaa07295d6278ddbf7044b)<br/>
 
-In the following we will introduce the main principles of vSLAM and viSLAM.<br/>
+In the following we will introduce the main principles of vSLAM and viSLAM.<br/>In this project we have focused mainly on visual-inertial SLAM (viSLAM) an evolution of visual SLAM (vSLAM) tecniques
 
 ## Classical Structure of vSLAM
 Four main blocks describe the overall operation of any vSLAM algorithm. They are the following:
