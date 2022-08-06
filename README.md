@@ -121,7 +121,7 @@ The ARCloudAnchorManager class handles all the procedure with regards to hosting
 * First resolution, it appens when the resolution procedure is performed for the first time in a session (without hosting any element), it effectively retrieves the previous session, allowing to visualize it and to update it adding new screenshot objects;
 * Successive resolution, it happens all the times that a resolution procedure is performed after a previous hosting procedure. It allows to retrieve all the screenshot objects that are currently missing in the scene. The objects are retrieved from the cloud;
 
-### ARDebugManager, SaveManager and AnchrEntity
+### ARDebugManager, SaveManager and AnchorEntity
 The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally in a .Json file, allowing it to be retrieved in the next sessions or to be overwritten with a new one. [ADD WHAT REQUIRED ABOUT .JSON STORING]
 
 
