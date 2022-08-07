@@ -220,11 +220,11 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 # Demo
 
-*  Scan of the area
+## Scan of the area
 
-![scanning](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/10addio.gif?raw=true)
+![scanning]()
 
-*  Placement of objects
+##  Placement of objects
 
 # Future implementations
 
