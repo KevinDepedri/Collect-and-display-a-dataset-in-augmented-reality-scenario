@@ -220,7 +220,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 # Demo
 
-## Scan of the area
+For a demonstration of the app download the videos folder in this repo
 
 ![scanning]()
 
