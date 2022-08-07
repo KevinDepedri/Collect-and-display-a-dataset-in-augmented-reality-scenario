@@ -222,8 +222,6 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 For a demonstration of the app download the videos folder in this repo
 
-![scanning]()
-
 ##  Placement of objects
 
 # Future implementations
