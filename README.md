@@ -158,7 +158,7 @@ The ARCloudAnchorManager class handles all the procedure with regards to hosting
 * Successive resolution, it happens all the times that a resolution procedure is performed after a previous hosting procedure. It allows to retrieve all the screenshot objects that are currently missing in the scene. The objects are retrieved from the cloud;
 
 ### ARDebugManager, SaveManager and AnchorEntity
-The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally in a .Json file, allowing it to be retrieved in the next sessions or to be overwritten with a new one. [ADD WHAT REQUIRED ABOUT .JSON STORING]
+The ARDebugManager class allows us to get feedbacks from the application, while the SaveManager class together with the AnchrEntity class handles the save of the current session locally in a .Json file, allowing it to be retrieved in the next sessions or to be overwritten with a new one.
 
 
 ## Detailed working of the application
@@ -201,7 +201,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
-<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png)
+<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/Image-x.png), furthermore, the pictures are saved in (android/data/com.WreckerCompany.appname/files/SavedImageWithCoordinates/Image-x-coordinates.png) as well, where the name of the picture encompasses also the coordinates where the picture has been taken.
 
 
 
