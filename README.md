@@ -116,7 +116,7 @@ Benchmark, and PennCOSYVIO. Examples of Optimization-Based Methods are Loop Clos
 
 5) Connect to the ARCore Cloud Anchor API from  `Edit -> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`;
 
-6) If the previous `API Key` does not work please follow this procedure to generate your own API Key: [Generate your own API key](https://cloud.google.com/docs/authentication/api-keys?ref_topic=6262490&visit_id=637954035540901895-2222129602&rd=1);
+6) If the previous `API Key` does not work please [follow this procedure](https://cloud.google.com/docs/authentication/api-keys?ref_topic=6262490&visit_id=637954035540901895-2222129602&rd=1) to generate your own API Key;
 
 
 
