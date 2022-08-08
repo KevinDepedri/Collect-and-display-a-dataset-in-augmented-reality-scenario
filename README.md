@@ -201,7 +201,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
-<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.appname/files/SavedImage/). Furthermore, the pictures are saved in (android/data/com.WreckerCompany.appname/files/SavedImageWithCoordinates/) as well, where the name of the picture encompasses also the coordinates where the picture has been taken.
+<br/>**NOTE**: all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). Furthermore, the pictures are saved in (android/data/com.WreckerCompany.ARHolograms/files/SavedImageWithCoordinates/) as well, where the name of the picture encompasses also the coordinates where the picture has been taken.
 
 
 
