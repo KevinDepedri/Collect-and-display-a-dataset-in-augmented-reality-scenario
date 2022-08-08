@@ -112,7 +112,7 @@ Benchmark, and PennCOSYVIO. Examples of Optimization-Based Methods are Loop Clos
    - **ARCore XR Plugin**;
 
 4) Install all the following extension package from `Window -> Package Manager -> Add package from disk `:
-   - **ARCore Extensions ([download here](https://drive.google.com/file/d/1cEnSbLQyr5M0FrztjtlwNCZ_kBMKIbGT/view?usp=sharing)**); [SOBSTITUTE WITH GITHUB LINK]
+   - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/raw/main/arcore_extension_package%20-%20extract_and_install_from_disk.zip)**);
 
 5) Connect to the ARCore Cloud Anchor API from  `Edit -> Project Settings -> XR Plug-in Management -> ARCore Extensions` by selecting the option `API Key` from the drop-down menu `Android Authentication Strategy` and pasting the following key `AIzaSyAfzBVfUoXcPlFHWhEW8Xl5K8NBVBe5RBI`;
 
