@@ -107,6 +107,8 @@ Benchmark, and PennCOSYVIO. Examples of Optimization-Based Methods are Loop Clos
 
 2) Download and import the project linked with this repo
 
+All the following points should be already correctly configured in the downloaded repo. If problems arises check them:
+
 3) Install all the following required packages from `Window -> Package Manager -> Search`:
    - **AR Foundation**;
    - **ARCore XR Plugin**;
