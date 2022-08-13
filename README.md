@@ -115,6 +115,7 @@ All the following points should be already correctly configured in the downloade
 
 4) Install all the following extension package from `Window -> Package Manager -> Add package from disk `:
    - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/raw/main/arcore_extension_package%20-%20extract_and_install_from_disk.zip)**);
+   - ** unzip the folder. The extension to install is 'package.json'; 
 
 5) Enable ARCore from `Edit -> Project Settings -> XR Plug-in Management` checking the box `ARCore`
 
