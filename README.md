@@ -116,7 +116,7 @@ All the following points should be already correctly configured in the downloade
 4) Unzip the following folder:
    - - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/raw/main/arcore_extension_package%20-%20extract_and_install_from_disk.zip)**);
 
-5) Install all the following extension package from `Window -> Package Manager -> Add package from disk `:
+5) Install the extension package from `Window -> Package Manager -> Add package from disk `:
    - The file to install is named 'package.json' in the unzipped folder arcore-unity-extensions-master;
 
 6) Enable ARCore from `Edit -> Project Settings -> XR Plug-in Management` checking the box `ARCore`
