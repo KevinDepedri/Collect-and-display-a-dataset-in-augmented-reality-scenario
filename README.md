@@ -24,7 +24,24 @@
 
 ## Introduction
 
+SLAM (**Simultaneous Localization and Mapping**) is an algorithm born in the 80s.
+Its goal is to obtain a global and consistent estimate of a device’s path while reconstructing a map of the surrounding environment. The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods.<br/> 
+This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.
 
+## Good Feature Points
+
+But how can SLAM perform these actions. The idea behind the algorithm is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to retrieve the information about the environment. <br/>
+While using an AR application many conditions can change, i.e:
+   - camera angle / perspective;
+   - rotation;
+   - scale;
+   - lightning;
+   - blur from motion or focusing;
+   - general image noise.
+ For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and that is why neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
+
+
+## 
 
 # Getting started
 ## Setup of the Unity Environment
