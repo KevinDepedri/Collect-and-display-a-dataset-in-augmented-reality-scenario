@@ -39,6 +39,25 @@ While using an AR application many conditions can change, i.e:
    - blur from motion or focusing;
    - general image noise.
  For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and that is why neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
+ 
+## Feature points extraction
+
+Finding distinctive feature points in images has been an active research field for quite some time. One of the most influential algorithms is called “SIFT” (“Scale Invariant Feature Transform”). It was developed by David G. Lowe and published in 2004. Another “traditional” method is called “SURF” (Speeded up robust features”) by H. Bay et al. Both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices.<br/>
+The process to extract good keypoints is summarize in two phases:
+   - keypoint detection
+   - keypoint description
+ 
+ These are the base for tracking & recognizing the environment.
+ 
+ ## SLAM for Augmented Reality
+ 
+For Augmented Reality, the device has to know more: its 3D position in the world. It calculates this through the spatial relationship between itself and multiple keypoints. This process is called “Simultaneous Localization and Mapping”, SLAM for short.<br/>
+As said before most of the information is acquired through the device camera. It combines the data from the accelerometer and the gyroscope and from other minor sensors allowing the device to:
+   - Build a map of the environment;
+   - Locate itself within that environment;
+ 
+Since the real world is affected by errors due to noise in images and in sensors the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA).
+ 
 
 
 ## 
