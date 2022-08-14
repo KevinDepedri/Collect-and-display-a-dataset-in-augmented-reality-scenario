@@ -210,11 +210,11 @@ After that the acquisition has been performed, the anchors have been hosted and 
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
-<br/>**NOTE**:<br/> all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as follow Image-nr where nr is an integer index. Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/>
-Image-nr<br/>
+<br/>**NOTE**:<br/> all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as follow Image-nr where nr is an integer index. Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
+**Image-nr<br/>
 coordinate x: position.x coordinate y: position.y coordinate z: position.z<br>
 quaternion rotation: (a,b,c,d)<br/>
-where position.x, position.y, position.z are the spatial coordinates of the camera and a,b,c,d are the coordinates to represent the rotation of the camera.
+where position.x, position.y, position.z are the spatial coordinates of the camera and a,b,c,d are the coordinates to represent the rotation of the camera.**
 
 
 
