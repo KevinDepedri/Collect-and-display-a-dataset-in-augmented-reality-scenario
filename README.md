@@ -227,7 +227,12 @@ where position.x, position.y, position.z are the spatial coordinates of the came
 
 # Demo
 
-For a demonstration of the app download the videos folder in this repo.
+For a demonstration of the app download the videos folder in this repo. In this section we provide a briegly description of each video.<br/>
+In the folder you find four videos that summirize the main aspects of the application:
+   - **ScanfOfTheArea.mp4**: in this video the user scans the area around the device;
+   - **PlacementOfObjects.mp4**: the holograms are instantiated;
+   - **AnchorHosting.mp4**: once the holograms are taken they are hosted on a cloud;
+   - **AnchorSolving.mp4**: the device recognize the environment and its current position and is able to correctly retrieve the holograms created.
 
 # Future implementations
 
