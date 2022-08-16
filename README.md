@@ -38,14 +38,14 @@ The general system of the SLAM Algorithm is made up of 4 parts:
  
 In an Augmented Reality scneario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
 The useful information to correctly localize itself in a place is acquired through the device camera. SLAM combines the data from the accelerometer and the gyroscope and from other minor sensors allowing to:
-   - Build a map of the environment;
-   - Localize the device itself within that environment;
+   - **Build a map of the environment**;
+   - **Localize the device itself within that environment**;
 
 Since the common devices are equipped with monocular cameras we can talk about **MonoSLAM**. The four challenges to solve for the best reconstruction of the environment in Augmented Reality using SLAM are:
-   - Unknown space;
-   - Uncontrolled camera;
-   - Real-time;
-   - Drift-free.
+   - **Unknown space**;
+   - **Uncontrolled camera**;
+   - **Real-time**;
+   - **Drift-free**.
 
 As we knwo though the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
 
@@ -204,7 +204,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
-<br/>**NOTE**:<br/> all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as follow Image-nr where nr is an integer index. Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
+<br/>**NOTE**:<br/> all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as follow Image-nr where nr is an integer index (the path is reacheable from the File Manager folder in the home screen). Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
 **Image-nr<br/><br/>
 coordinate x: position.x<br/> coordinate y: position.y<br/> coordinate z: position.z<br/>
 quaternion rotation: (a,b,c,d)<br/><br/>**
