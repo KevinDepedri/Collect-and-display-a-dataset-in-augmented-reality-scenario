@@ -68,7 +68,8 @@ Since the common devices are equipped with monocular cameras it is correct to ta
    - Uncontrolled camera;
    - Real-time;
    - Drift-free.
-   
+ 
+ 
  
 
  
