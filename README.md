@@ -77,7 +77,7 @@ The process to extract good keypoints is divided in two phases:
 
 
 In the image below it is shown the matching between keypoints from two different perspectives of the same image
-![image_2](https://www.researchgate.net/profile/Roland-Siegwart/publication/221110715/figure/fig1/AS:305605362372618@1449873404601/BRISK-matching-example-a-detection-threshold-of-70-is-used-and-a-matching-Hamming.png)<br/><br/>
+![image_2](https://i.stack.imgur.com/hw4UX.jpg)<br/><br/>
 
  
  ## Converting Keypoints to 3D Landmarks
