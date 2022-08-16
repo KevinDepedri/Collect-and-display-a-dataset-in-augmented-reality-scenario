@@ -229,9 +229,9 @@ where position.x, position.y, position.z are the spatial coordinates of the came
 
 For a demonstration of the app download the videos folder in this repo. In this section we provide a briegly description of each video.<br/>
 In the folder you find four videos that summirize the main aspects of the application:
-   - **ScanfOfTheArea.mp4**: in this video the user scans the area around the device;
-   - **PlacementOfObjects.mp4**: the holograms are instantiated;
-   - **AnchorHosting.mp4**: once the holograms are taken they are hosted on a cloud;
+   - **ScanfOfTheArea.mp4**: in this video the user scans the area around the device. The scan has to last from 15 to 30 seconds;
+   - **PlacementOfObjects.mp4**: the holograms are instantiated. They are placed according to the position of the camera and its rotation;
+   - **AnchorHosting.mp4**: once the holograms are taken they are hosted on a cloud. The debugger shows the quality of the features in the environment and tells the user when an hologram is hosted. At the end a message "END OF HOSTING PROCEDURE" is shown;
    - **AnchorSolving.mp4**: the device recognize the environment and its current position and is able to correctly retrieve the holograms created.
 
 # Future implementations
