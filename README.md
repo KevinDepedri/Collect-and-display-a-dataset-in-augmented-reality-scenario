@@ -71,7 +71,7 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
  
 ## Feature points extraction
 
-Finding distinctive feature points in images has been an active research field for quite some time. One of the most influential algorithms is called **“SIFT” (“Scale Invariant Feature Transform”)**. Another “traditional” method is called **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices. SLAM algorithm uses a ad-hoc tracking algorithm called ORB.<br/>
+Finding distinctive feature points in images has been an active research field for quite some time. The most influential algorithms are called **“SIFT” (“Scale Invariant Feature Transform”)** and **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices and for that reason SLAM algorithms use an ad-hoc tracking algorithm called ORB.<br/>
 The process to extract good keypoints is divided in two phases:
    - **keypoint detection**: could be performed by a **corners-detection algorithm**. It is important that the algorithm is scale-invariant and less dependent on noise. SIFT and SURF are good choices for that but due to complexity purposes the most used algorithm is **BRISK**. 
    - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different circumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective.
@@ -83,16 +83,14 @@ The process to extract good keypoints is divided in two phases:
  
  ## Converting Keypoints to 3D Landmarks
  
-One of the most interesting parts of SLAM is how keypoints found in 2D camera frames actually get 3D coordinates (then called “map points” or “landmarks”).<br/>
-Whenever the algorithm gets a new frame from the camera, it first performs keypoint detection. These keypoints are then matched to the previous camera frame. The camera motion so far provides a good idea on where to find the same keypoints again in the new frame; this helps with the real-time requirement. The matching results in an initial camera pose estimation.
+Once keypoints are selected they have to be converted from 2D coordinates acquired from the camera to 3D system of the real world (then called “map points” or “landmarks”).<br/>
+In order to do that these keypoints are initially matched between two frames. The camera motion so far **provides a good idea on where to find the same keypoints again in the new frame** (using gyroscope and accelerometer) and this helps with the real-time requirement. The matching results in an initial camera pose estimation.
 Next, SLAM tries to improve the estimated camera pose. The algorithm projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
 New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames – but it can later be extended to additional frames.
 
 ## Loop Detection and Loop Closing
 
-Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset.
-
-By propagating the coordinate correction across the whole graph from the current location to the previous place, the map is updated with the new knowledge.
+Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset. By propagating the coordinate correction across the whole graph from the current location to the previous place, the map is updated step-by-step with the new knowledge.
 
 ## Future of SLAM
 
