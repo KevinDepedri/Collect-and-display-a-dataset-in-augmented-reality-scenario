@@ -63,7 +63,7 @@ While using an AR application many conditions can change, i.e:
    - general image noise.
 For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
  
-Here is an example of feature points:<br/>
+Here is an example of feature points:<br/><br/>
 
 ![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif)<br/><br/>
  
@@ -76,7 +76,7 @@ The process to extract good keypoints is divided in two phases:
    - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different cicumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective.
 
 
-In the image below it is shown the matching between keypoints from two different perspectives of the same image.<br/>
+In the image below it is shown the matching between keypoints from two different perspectives of the same image.<br/><br/><br/>
 ![image_2](https://i.stack.imgur.com/hw4UX.jpg)<br/><br/>
 
  
