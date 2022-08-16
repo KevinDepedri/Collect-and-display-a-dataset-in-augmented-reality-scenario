@@ -36,7 +36,7 @@ The general system of the SLAM Algorithm is made up of 4 parts:
 
 ## SLAM in Augmented Reality
  
-In an Augmented Reality scneario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
+In an Augmented Reality scenario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
 The useful information to correctly localize itself in a place is acquired through the device camera. SLAM combines the data from the accelerometer and the gyroscope and from other minor sensors allowing to:
    - **Build a map of the environment**;
    - **Localize the device itself within that environment**;
