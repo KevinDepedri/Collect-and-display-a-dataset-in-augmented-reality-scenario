@@ -29,30 +29,31 @@ Its goal is to obtain a global and consistent estimate of a device’s path whil
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.<br/>
 The general system of the SLAM Algorithm is made up of 4 parts:
    - **Sensor data**: on mobile devices, this usually includes the camera, accelerometer and gyroscope. It might be augmented by other sensors like GPS, light sensor,                       depth sensors, etc;
-   - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks – keypoints with a 3D                           position, also called map points. In addition, map points need to be tracked in a video stream. Long-term association reduces drift by recognizing                     places that have been encountered before (loop closure);
-   - **Back-End**: takes care of establishing the relationship between different frames, localizing the camera (pose model), as well as handling the overall geometrical                  reconstruction. Some algorithms create a sparse reconstruction (based on the keypoints). Others try to capture a dense 3D point cloud of the                            environment.
-   - **SLAM estimate**: the result containing the tracked features, their locations & relations, as well as the camera position within the world.
+   - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                                                   position, also called map points. In addition, map points need to be tracked in a video stream. Tis phase ends up with the loop closure, meaning that                   the devices reduces drift by recognizing places that have been encountered before (loop closure);
+   - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be perform by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
+   - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.
 
 
 ## SLAM in Augmented Reality
  
-For Augmented Reality, the device has to know its 3D position in the world. It calculates this through the spatial relationship between itself and multiple keypoints.<br/>
-The useful information is acquired through the device camera. It combines the data from the accelerometer and the gyroscope and from other minor sensors allowing the device to:
+In an Augmented Reality scneario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
+The useful information to correctly localize itself in a place is acquired through the device camera. SLAM combines the data from the accelerometer and the gyroscope and from other minor sensors allowing to:
    - Build a map of the environment;
-   - Locate itself within that environment;
- 
-Since the real world is affected by errors due to noise in images and in sensors the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA).<br/>
-Since the common devices are equipped with monocular cameras it is correct to talk about MonoSLAM. The four challenges to solve for the best reconstruction of the environment in AR using SLAM are:
+   - Localize the device itself within that environment;
+
+Since the common devices are equipped with monocular cameras we can talk about **MonoSLAM**. The four challenges to solve for the best reconstruction of the environment in Augmented Reality using SLAM are:
    - Unknown space;
    - Uncontrolled camera;
    - Real-time;
    - Drift-free.
 
-The two most important steps to be performed for a good SLAM algorithm are **feature points choice and feature points extraction**.
+As we knwo though the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
 
-## Good Feature Points
+Now we know what a SLAM algorithm uses for AR applications. We describe now the most important steps of the entire procedure  
 
-The idea is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to retrieve the information about the environment. <br/>
+## (Good) Feature Points
+
+The idea is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
 While using an AR application many conditions can change, i.e:
    - camera angle / perspective;
    - rotation;
@@ -64,25 +65,21 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
  
 ## Feature points extraction
 
-Finding distinctive feature points in images has been an active research field for quite some time. One of the most influential algorithms is called “SIFT” (“Scale Invariant Feature Transform”). It was developed by David G. Lowe and published in 2004. Another “traditional” method is called “SURF” (Speeded up robust features”) by H. Bay et al. Both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices.<br/>
-The process to extract good keypoints is summarize in two phases:
-   - keypoint detection
-   - keypoint description
- 
- These are the base for tracking & recognizing the environment. 
+Finding distinctive feature points in images has been an active research field for quite some time. One of the most influential algorithms is called **“SIFT” (“Scale Invariant Feature Transform”)**. Another “traditional” method is called **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices. SLAM algorithm uses a ad-hoc tracking algorithm called ORB.<br/>
+The process to extract good keypoints is divided in two phases:
+   - **keypoint detection**: could be a **corners-detection algorithm**. It is important that the algorithm is scale-invariant and less dependent on noise. SIFT and SURF are good choices for that but due to complexity purposes the most used algorithm is **BRISK**. 
+   - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different cicumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective.
  
  ## Converting Keypoints to 3D Landmarks
  
- ne of the most interesting parts of SLAM is how keypoints found in 2D camera frames actually get 3D coordinates (then called “map points” or “landmarks”).<br/>
- Whenever the algorithm gets a new frame from the camera, it first performs keypoint detection. These keypoints are then matched to the previous camera frame. The camera motion so far provides a good idea on where to find the same keypoints again in the new frame; this helps with the real-time requirement. The matching results in an initial camera pose estimation.
-
-Next, ORB-SLAM tries to improve the estimated camera pose. The algorithm projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
-
+One of the most interesting parts of SLAM is how keypoints found in 2D camera frames actually get 3D coordinates (then called “map points” or “landmarks”).<br/>
+Whenever the algorithm gets a new frame from the camera, it first performs keypoint detection. These keypoints are then matched to the previous camera frame. The camera motion so far provides a good idea on where to find the same keypoints again in the new frame; this helps with the real-time requirement. The matching results in an initial camera pose estimation.
+Next, SLAM tries to improve the estimated camera pose. The algorithm projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
 New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames – but it can later be extended to additional frames.
 
 ## Loop Detection and Loop Closing
 
-Another key step in a SLAM algorithm is loop detection and loop closing: ORB-SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset.
+Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset.
 
 By propagating the coordinate correction across the whole graph from the current location to the previous place, the map is updated with the new knowledge.
 
