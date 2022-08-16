@@ -37,7 +37,7 @@ The general system of the SLAM Algorithm is made up of 4 parts:
 ## SLAM in Augmented Reality
  
 In an Augmented Reality scenario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
-The useful information to correctly localize itself in a place is acquired through the device camera. SLAM combines the data from the accelerometer and the gyroscope and from other minor sensors allowing to:
+The useful information to correctly localize itself in a place is acquired through the device camera. SLAM instantiates a cartesian coordinate system with the origin in the initial camera's position and then combines the data from the accelerometer and the gyroscope to estimate the movement of the device. Using these data the algorithm is then able to:
    - **Build a map of the environment**;
    - **Localize the device itself within that environment**;
 
@@ -47,7 +47,7 @@ Since the common devices are equipped with monocular cameras we can talk about *
    - **Real-time**;
    - **Drift-free**.
 
-As we knwo though the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
+As we know though, the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
 
 Now we know what a SLAM algorithm uses for AR applications. We describe now the most important steps of the entire procedure  
 
