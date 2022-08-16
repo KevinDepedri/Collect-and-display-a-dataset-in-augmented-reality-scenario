@@ -227,9 +227,7 @@ where position.x, position.y, position.z are the spatial coordinates of the came
 
 # Demo
 
-For a demonstration of the app download the videos folder in this repo
-
-##  Placement of objects
+For a demonstration of the app download the videos folder in this repo.
 
 # Future implementations
 
