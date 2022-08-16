@@ -83,7 +83,9 @@ Another key step in a SLAM algorithm is loop detection and loop closing: SLAM ch
 
 By propagating the coordinate correction across the whole graph from the current location to the previous place, the map is updated with the new knowledge.
 
+## Future of SLAM
 
+We have had a look to the principles of the SLAM algorithm in Augmented Reality. Its application is
  
  
  
