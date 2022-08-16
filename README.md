@@ -41,7 +41,7 @@ The useful information to correctly localize itself in a place is acquired throu
    - **Build a map of the environment**;
    - **Localize the device itself within that environment**;
 
-Since the common devices are equipped with monocular cameras we can talk about **MonoSLAM**. The four challenges to solve for the best reconstruction of the environment in Augmented Reality using SLAM are:
+Since the common devices are equipped with monocular cameras we can talk about **visual MonoSLAM**. The four challenges to solve for the best reconstruction of the environment in Augmented Reality using SLAM are:
    - **Unknown space**;
    - **Uncontrolled camera**;
    - **Real-time**;
