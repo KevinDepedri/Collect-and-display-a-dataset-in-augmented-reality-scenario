@@ -125,11 +125,7 @@ All the following points should be already correctly configured in the downloade
 
 9) If the previous `API Key` does not work please [follow this procedure](https://cloud.google.com/docs/authentication/api-keys?ref_topic=6262490&visit_id=637954035540901895-2222129602&rd=1) to generate your own API Key;
 
-
-
 ## Build of the application
-
-* Download this repo and open the "Sample Scene" file;
 
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
 
