@@ -219,7 +219,7 @@ where position.x, position.y, position.z are the spatial coordinates of the came
 
 * [Anchors and Raycasting](https://www.andreasjakl.com/ar-foundation-fundamentals-with-unity-part-3/)
 
-* [SLAM Algorithm]([https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/](https://www.andreasjakl.com/basics-of-ar-slam-simultaneous-localization-and-mapping/))
+* [SLAM Algorithm](https://gisresources.com/what-is-slam-algorithm-and-why-slam-matters/](https://www.andreasjakl.com/basics-of-ar-slam-simultaneous-localization-and-mapping/)
 
 
 
