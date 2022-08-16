@@ -63,6 +63,11 @@ While using an AR application many conditions can change, i.e:
    - general image noise.
 For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
  
+Here is an example of feature points:
+
+![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif)<br/><br/><br/>
+ 
+ 
 ## Feature points extraction
 
 Finding distinctive feature points in images has been an active research field for quite some time. One of the most influential algorithms is called **“SIFT” (“Scale Invariant Feature Transform”)**. Another “traditional” method is called **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices. SLAM algorithm uses a ad-hoc tracking algorithm called ORB.<br/>
