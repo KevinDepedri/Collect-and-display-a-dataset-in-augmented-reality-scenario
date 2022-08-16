@@ -61,7 +61,8 @@ While using an AR application many conditions can change, i.e:
    - **lightning**
    - **blur from motion or focusing**;
    - **general image noise**
-<br/><br/>For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
+
+For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
  
 *Here is an example of feature points*:<br/><br/>
 
