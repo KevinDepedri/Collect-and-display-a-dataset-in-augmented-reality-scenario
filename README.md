@@ -62,7 +62,15 @@ As said before most of the information is acquired through the device camera. It
    - Build a map of the environment;
    - Locate itself within that environment;
  
-Since the real world is affected by errors due to noise in images and in sensors the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA).
+Since the real world is affected by errors due to noise in images and in sensors the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA).<br/>
+Since the common devices are equipped with monocular cameras it is correct to talk about MonoSLAM. The four challenges to solve for the best reconstruction of the environment in AR using SLAM are:
+   - Unknown space;
+   - Uncontrolled camera;
+   - Real-time;
+   - Drift-free.
+   
+ 
+
  
 
 
