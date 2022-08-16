@@ -55,12 +55,12 @@ Now we know what a SLAM algorithm uses for AR applications. We describe now the 
 
 The idea is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
 While using an AR application many conditions can change, i.e:
-   - camera angle / perspective;
-   - rotation;
-   - scale;
-   - lightning;
-   - blur from motion or focusing;
-   - general image noise.
+   - **camera angle / perspective**;
+   - **rotation**;
+   - **scale**;
+   - **lightning**
+   - **blur from motion or focusing**;
+   - **general image noise**.
 For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
  
 *Here is an example of feature points*:<br/><br/>
