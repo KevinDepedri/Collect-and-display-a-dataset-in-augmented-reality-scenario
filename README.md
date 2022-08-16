@@ -85,7 +85,7 @@ By propagating the coordinate correction across the whole graph from the current
 
 ## Future of SLAM
 
-We have had a look to the principles of the SLAM algorithm in Augmented Reality. Its application is
+We have had a look to the principles of the SLAM algorithm in Augmented Reality. Its application is spreading and improving and most of the developers are focused on combining new types of sensors to make SLAM more efficient i.e. HoloLens. Other ideas are thought to improve stability and speed (i.e. ORB-SLAM2 and OKVIS) or to use semantic meaning into SLAM algorithm. 
  
  
  
