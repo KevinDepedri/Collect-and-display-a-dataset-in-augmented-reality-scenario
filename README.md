@@ -83,7 +83,7 @@ The process to extract good keypoints is divided in two phases:
  
  ## Converting Keypoints to 3D Landmarks
  
-Once keypoints are selected they have to be converted from 2D coordinates acquired from the camera to 3D system of the real world (then called “map points” or “landmarks”).<br/>
+Once keypoints are selected they have to be converted from 2D coordinates acquired from the camera to 3D system of the real world (called “map points” or “landmarks”).<br/>
 In order to do that these keypoints are initially matched between two frames. The camera motion so far **provides a good idea on where to find the same keypoints again in the new frame** (using gyroscope and accelerometer) and this helps with the real-time requirement. The matching results in an initial camera pose estimation.
 Next, SLAM tries to improve the estimated camera pose. The algorithm projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
 New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames – but it can later be extended to additional frames.
