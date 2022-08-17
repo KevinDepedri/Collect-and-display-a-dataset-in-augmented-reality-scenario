@@ -28,7 +28,7 @@ SLAM (**Simultaneous Localization and Mapping**) is an algorithm born in the 80s
 Its goal is to obtain a global and consistent estimate of a device’s path while reconstructing a map of the surrounding environment. The coupling between these two tasks, initially considered as the core issue, was soon discovered to be the real strength of SLAM methods.<br/> 
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.<br/>
 The general system of the SLAM Algorithm is made up of 4 parts:
-   - **Sensor data**: on mobile devices, this usually includes the camera (and that is why we talk about **visual SLAM**), accelerometer and gyroscope. It might be augmented by other sensors like GPS, light sensor,                       depth sensors, etc;
+   - **Sensor data**: on mobile devices, this usually includes the camera, accelerometer and gyroscope. It might be augmented by other sensors like GPS, light sensor,                       depth sensors, etc;
    - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                                                   position, also called map points. In addition, map points need to be tracked in a video stream. Tis phase ends up with the loop closure, meaning that                   the devices reduces drift by recognizing places that have been encountered before (loop closure);
    - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be perform by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.
@@ -37,19 +37,19 @@ The general system of the SLAM Algorithm is made up of 4 parts:
 ## SLAM in Augmented Reality
  
 In an Augmented Reality scenario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
-The useful information to correctly localize itself in a place is acquired through the device camera. SLAM instantiates a cartesian coordinate system with the origin in the initial camera's position and then combines the data from the accelerometer and the gyroscope to estimate the movement of the device. Using these data the algorithm is then able to:
+The useful information to correctly localize itself in a place is acquired through the device camera perhaps we can call the algorithm **visual SLAM**. SLAM instantiates a cartesian coordinate system with the origin in the initial camera's position and then combines the data from the accelerometer and the gyroscope to estimate the movement of the device. Using these data the algorithm is then able to:
    - **Build a map of the environment**;
    - **Localize the device itself within that environment**;
 
-Since the common devices are equipped with monocular cameras we can talk about **visual MonoSLAM**. The four challenges to solve for the best reconstruction of the environment in Augmented Reality using SLAM are:
+Since the common devices are equipped with monocular cameras we talk about **visual MonoSLAM**. The four challenges to solve for the best reconstruction of the environment and localization in Augmented Reality using SLAM are:
    - **Unknown space**;
    - **Uncontrolled camera**;
    - **Real-time**;
    - **Drift-free**.
 
-As we know though, the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
+As we know though, the real world is affected by errors due to noise in images and in sensors. For that reason the mapping cannot be performed by the SLAM alone but it has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
 
-Now we know what a SLAM algorithm uses for AR applications. We describe now the most important parts of the entire procedure  
+Now we know what a SLAM algorithm uses for AR applications in terms of hardware and software. We describe now the most important parts of the entire procedure  
 
 ## (Good) Feature Points
 
@@ -62,7 +62,7 @@ While using an AR application many conditions can change, i.e:
    - **blur from motion or focusing**;
    - **general image noise**
 
-For that reason a feature point alone is not enough to elaborate sufficiently the envoronment and neighbours of the point are taken into account in order to reinforce the mapping of the envornment.
+For that reason a feature point alone is not enough to elaborate sufficiently the environment and neighbours of the point are taken into account in order to reinforce the mapping procedure.
  
 *Step 1: Good feature points detection*:<br/><br/>
 
@@ -84,13 +84,13 @@ The process to extract good keypoints is divided in two phases:
  ## Converting Keypoints to 3D Landmarks
  
 Once keypoints are selected they have to be converted from 2D coordinates acquired from the camera to 3D system of the real world (called “map points” or “landmarks”).<br/>
-In order to do that these keypoints are initially matched between two frames. The camera motion so far **provides a good idea on where to find the same keypoints again in the new frame** (using gyroscope and accelerometer) and this helps with the real-time requirement. The matching results in an initial camera pose estimation.
-Next, SLAM tries to improve the estimated camera pose. The algorithm projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
-New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames – but it can later be extended to additional frames.
+In order to do that these keypoints are initially matched between two frames. The camera motion so far **provides a good idea on where to find the same keypoints again in the new frame** (using gyroscope and accelerometer) and this helps with the **real-time requirement**. The matching results in an initial camera pose estimation.
+Next, SLAM tries to improve the estimated camera pose using successive frames. Once the algorithm has acquired a new frame it projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
+New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames but it can later be extended to additional frames.
 
 ## Loop Detection and Loop Closing
 
-Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset. By propagating the coordinate correction across the whole graph from the current location to the previous place (a sort of backpropagation procedure), the map is updated step-by-step with the new knowledge.
+The last step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user **returned to a known place**; but inaccuracies on the way might have introduced an offset. Using a correction strategy and propagating this error across the whole graph from the current location to the previous place (a sort of backpropagation procedure), the map is updated step-by-step with the new knowledge.<br/>
 
 ## Future of SLAM
 
