@@ -29,7 +29,7 @@ Its goal is to obtain a global and consistent estimate of a device’s path whil
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.<br/>
 The general system of the SLAM Algorithm is made up of 4 parts:
    - **Sensor data**: on mobile devices, this usually includes the camera, accelerometer and gyroscope. It might be augmented by other sensors like GPS, light sensor,                       depth sensors, etc;
-   - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                                                   position, also called map points. In addition, map points need to be tracked in a video stream. Tis phase ends up with the loop closure, meaning that                   the devices reduces drift by recognizing places that have been encountered before (loop closure);
+   - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                                                   position, also called map points. In addition, map points need to be tracked in a video stream. This phase ends up with the loop closure, meaning that                   the devices reduces drift by recognizing places that have been encountered before (loop closure);
    - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be perform by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.
 
@@ -58,7 +58,7 @@ While using an AR application many conditions can change, i.e:
    - **camera angle / perspective**;
    - **rotation**;
    - **scale**;
-   - **lightning**
+   - **lighting**
    - **blur from motion or focusing**;
    - **general image noise**
 
@@ -132,7 +132,7 @@ All the following points should be already correctly configured in the downloade
 
 * Choose your device from the `Run Device` section;
 
-* Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness, check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
+* Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness. Check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
 
 * Click `Build and Run`;
 
@@ -166,13 +166,13 @@ The ARDebugManager class allows us to get feedbacks from the application, while 
 ## Detailed working of the application
 ### Start of the application
 As the application starts, the user is required to scan the environment for at least 15/30 seconds. This allow the SLAM algorithm to acquire some data from the current environment, and to build a feature map that will be used to position the anchors of the placed screenshoot objects. A longer scan allows to get a higher quality feature map, and so higher quality anchors which will be quicker to resolve and also more precise. A shorter scan leads to lower quality feature map which in the worst case could lead to anchors that are not retrievable.
-It is important to remember that environment with extreme light conditions(brightness or darkness) and with important reflections will be very difficult to map, also when performing a scanning procedure for 30 seconds or more. In this case the placed object could be positioned in imprecise positions and the anchors could be really difficult to retrieve.
+It is important to remember that environment with extreme light conditions(brightness or darkness) and with important reflections will be very difficult to map, also when performing a scan procedure for 30 seconds or more. In this case the placed object could be positioned in imprecise positions and the anchors could be really difficult to retrieve.
 
 ### Moving the first steps
 After performing the scan of the environmente the user is able to place as many screenshot objects as he wants. To place an object it is sufficient to perform `One-Tap` on the area of the screen where the acquisition of the camera is visible. When an object is placed the user need to move slightly backward to be able to see the performed acquisition, which will be positioned with the correct inclination and also with the correct rotation (vertical or horizontal).
 
 ### Dealing with a multiple list system
-The application is based on a multiple list system which allows to have different list for local objects and cloud object. In this way the user is able to acquire the wanted screenshot locally, then to evaluate them and eventually to remove the not good ones pressing the `Remove Last Obj button` to then acquire them again. Fianlly the users is able to host them when he is satisfied with the result pressing the `Host Anchors button`.
+The application is based on a multiple list system which allows to have different list for local objects and cloud object. In this way the user is able to acquire the wanted screenshot locally, then to evaluate them and eventually to remove the not good ones pressing the `Remove Last Obj button` to then acquire them again. Finally, the users is able to host them when he is satisfied with the result pressing the `Host Anchors button`.
 As soon as the `Host Anchors button` is pressed then the anchors are gradually hosted on the cloud and the removed from the list of the anchors which were waiting for the hosting, in this way each single object won't be hosted more than once.
 
 ### Different possibile combinations of actions
