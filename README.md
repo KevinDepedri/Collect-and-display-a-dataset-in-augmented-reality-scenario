@@ -77,7 +77,7 @@ The process to extract good keypoints is divided in two phases:
    - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different circumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective. 
 
 
-*Step 2 Feature points extraction: as we can see the same points are recognized from two different perspectives*.<br/><br/><br/>
+*Step 2: Feature points extraction: as we can see the same points are recognized from two different perspectives*.<br/><br/><br/>
 ![image_2](https://i.stack.imgur.com/hw4UX.jpg)<br/><br/>
 
  
