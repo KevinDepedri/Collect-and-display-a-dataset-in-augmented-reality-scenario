@@ -73,7 +73,7 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
 
 Finding distinctive feature points in images has been an active research field for quite some time. The most influential algorithms are called **“SIFT” (“Scale Invariant Feature Transform”)** and **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices and therefore SLAM algorithms use an ad-hoc tracking algorithm called ORB.<br/>
 The process to extract good keypoints is divided in two phases:
-   - **keypoint detection**: could be performed by a **corners-detection algorithm**. It is important that the algorithm is scale-invariant and less dependent on noise. SIFT and SURF are good choices for that but due to complexity purposes the most used algorithm is **BRISK**. 
+   - **keypoint detection**: could be performed by a **corners-detection algorithm**. It is important that the algorithm is scale-invariant and less dependent on noise. SIFT and SURF are good choices for that but due to complexity reasons the most used algorithm is **BRISK**. 
    - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different circumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective. 
 
 
