@@ -49,11 +49,11 @@ Since the common devices are equipped with monocular cameras we can talk about *
 
 As we know though, the real world is affected by errors due to noise in images and in sensors. For that reason the mapping has to be improved through some algorithms that are reliable with partial information and uncertainty. These algorithms are **Extended Kalman Filter, Maximum a Posteriori (MAP) estimation or Bundle Adjustment (BA)**.<br/>
 
-Now we know what a SLAM algorithm uses for AR applications. We describe now the most important steps of the entire procedure  
+Now we know what a SLAM algorithm uses for AR applications. We describe now the most important parts of the entire procedure  
 
 ## (Good) Feature Points
 
-The idea is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
+The first step is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
 While using an AR application many conditions can change, i.e:
    - **camera angle / perspective**;
    - **rotation**;
