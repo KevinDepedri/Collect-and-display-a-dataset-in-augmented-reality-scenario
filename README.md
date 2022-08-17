@@ -203,7 +203,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
 
-<br/>**NOTE**:<br/> all the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as follow Image-nr where nr is an integer index (the path is reacheable from the File Manager folder in the home screen). Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
+<br/>**NOTE**:<br/> All the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as "Image-nr" where nr is an integer index (the path is reacheable from the File Manager folder in the home screen). Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
 **Image-nr<br/><br/>
 coordinate x: position.x<br/> coordinate y: position.y<br/> coordinate z: position.z<br/>
 quaternion rotation: (a,b,c,d)<br/><br/>**
@@ -224,7 +224,7 @@ where position.x, position.y, position.z are the spatial coordinates of the came
 
 # Demo
 
-For a demonstration of the app download the videos folder in this repo. In this section we provide a briegly description of each video.<br/>
+For a demonstration of the app download the videos folder in this repo. In this section we provide a brief description of each video.<br/>
 In the folder you find four videos that summirize the main aspects of the application:
    - **ScanfOfTheArea.mp4**: in this video the user scans the area around the device. The scan has to last from 15 to 30 seconds;
    - **PlacementOfObjects.mp4**: the holograms are instantiated. They are placed according to the position of the camera and its rotation;
@@ -235,7 +235,7 @@ In the folder you find four videos that summirize the main aspects of the applic
 
 - [ ] Add support for API to host also images and Json file on the cloud allowing for a full information retrieval from other devices;
 
-- [ ] Add real-time information about the quaity of the generated feature map to encurage users to explore more the environment;
+- [ ] Add real-time information about the quality of the generated feature map to encurage users to explore more the environment;
 
 - [ ] Add the option to save the pictures in a path choosen by the user and to show the pictures in the image gallery;
 
