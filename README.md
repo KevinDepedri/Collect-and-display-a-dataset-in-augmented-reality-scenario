@@ -90,7 +90,7 @@ New map points are created by triangulating matching keypoints from connected fr
 
 ## Loop Detection and Loop Closing
 
-Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset. By propagating the coordinate correction across the whole graph from the current location to the previous place, the map is updated step-by-step with the new knowledge.
+Another key step in a SLAM algorithm is loop detection and loop closing: SLAM checks if keypoints in a frame match with previously detected keypoints from a different location. If the similarity exceeds a threshold, the algorithm knows that the user returned to a known place; but inaccuracies on the way might have introduced an offset. By propagating the coordinate correction across the whole graph from the current location to the previous place (a sort of backpropagation procedure), the map is updated step-by-step with the new knowledge.
 
 ## Future of SLAM
 
