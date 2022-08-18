@@ -102,7 +102,7 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 
 1) Install Unity editor 2021.3 or later versions;
 
-2) Download and import the project linked with this repo
+2) Download and import the project linked with this repo (once imported an error could appear in the console. Do not care about it, it will not affect the build of the application)
 
 All the following points should be already correctly configured in the downloaded repo. If problems arises check them:
 
@@ -130,7 +130,7 @@ All the following points should be already correctly configured in the downloade
 
 * Connect your mobile phone to the computer;
 
-* Choose your device from the `Run Device` section;
+* Choose your device from the `Run Device` section (click on `Refresh` if you do not see your device in the dropdown menu);
 
 * Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness. Check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
 
