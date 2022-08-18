@@ -103,15 +103,14 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 1) Install Unity editor 2021.3 or later versions;
 
 2) Download and import the project linked with this repo. Once imported an error could appear in the console (***Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'***). Do not care about it, it will not affect the build of the application);
-3) Unzip the following folder:
-   - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/blob/main/arcore-unity-extensions-master.zip)**);
+
+3) Unzip the folder arcore-unity-extensions-master.zip in the project folder;
 
 **All the following points should be already correctly configured in the downloaded repo. If problems arises check them**:
 
-3) Install all the following required packages from `Window -> Package Manager -> Search`:
+4) Install all the following required packages from `Window -> Package Manager -> Search`:
    - **AR Foundation**;
    - **ARCore XR Plugin**;
-
 
 5) Install the extension package from `Window -> Package Manager -> Add package from disk `:
    - The file to install is named 'package.json' in the unzipped folder arcore-unity-extensions-master;
