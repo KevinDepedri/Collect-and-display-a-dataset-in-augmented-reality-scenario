@@ -103,6 +103,8 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 1) Install Unity editor 2021.3 or later versions;
 
 2) Download and import the project linked with this repo. Once imported an error could appear in the console (***Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'***). Do not care about it, it will not affect the build of the application);
+3) Unzip the following folder:
+   - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/raw/main/arcore_extension_package%20-%20extract_and_install_from_disk.zip)**);
 
 **All the following points should be already correctly configured in the downloaded repo. If problems arises check them**:
 
@@ -110,8 +112,6 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
    - **AR Foundation**;
    - **ARCore XR Plugin**;
 
-4) Unzip the following folder:
-   - - **ARCore Extensions ([download here](https://github.com/GiovanniAmbrosi/Collect-and-display-a-datasets-in-augmented-reality-scenario/raw/main/arcore_extension_package%20-%20extract_and_install_from_disk.zip)**);
 
 5) Install the extension package from `Window -> Package Manager -> Add package from disk `:
    - The file to install is named 'package.json' in the unzipped folder arcore-unity-extensions-master;
@@ -126,13 +126,13 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 
 ## Build of the application
 
+*  Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness. Check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
+
 * Click on `File -> Build Settings` and from the open window switch platform clicking on `Android` and then `Switch Platform`;
 
 * Connect your mobile phone to the computer;
 
 * Choose your device from the `Run Device` section (click on `Refresh` if you do not see your device in the dropdown menu);
-
-* Choose the level of debug you prefer from `Hierarchy -> AR Session -> AR DebugManager`, here check the box `Enable Debug` to turn on the debug in its wholeness. Check also the box `Only Critical Messages` if interested in removing the most specific messages and in keeping only the most important ones;
 
 * Click `Build and Run`;
 
