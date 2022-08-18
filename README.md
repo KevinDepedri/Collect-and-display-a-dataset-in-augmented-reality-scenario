@@ -30,7 +30,7 @@ This duality has also encouraged its diversification. By dosing the importance g
 The general system of the SLAM Algorithm is made up of 4 parts:
    - **Sensor data**: on mobile devices, this usually includes the camera, accelerometer and gyroscope. It might be augmented by other sensors like GPS, light sensor,                       depth sensors, etc;
    - **Front-End**: the first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                                                   position, also called map points. In addition, map points need to be tracked in a video stream. This phase ends up with the loop closure, meaning that                   the devices reduces drift by recognizing places that have been encountered before (loop closure);
-   - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be perform by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
+   - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be performed by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.
 
 
@@ -53,7 +53,7 @@ Now we know what a SLAM algorithm uses for AR applications in terms of hardware 
 
 ## (Good) Feature Points
 
-The first step is to find distinctive locations in images, such as corners or blobs and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
+The first step is to find distinctive locations in images, such as corners and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
 While using an AR application many conditions can change, i.e:
    - **camera angle / perspective**;
    - **rotation**;
@@ -84,8 +84,8 @@ The process to extract good keypoints is divided in two phases:
  ## Converting Keypoints to 3D Landmarks
  
 Once keypoints are selected they have to be converted from 2D coordinates acquired from the camera to 3D system of the real world (called “map points” or “landmarks”).<br/>
-In order to do that these keypoints are initially matched between two frames. The camera motion so far **provides a good idea on where to find the same keypoints again in the new frame** (using gyroscope and accelerometer) and this helps with the **real-time requirement**. The matching results in an initial camera pose estimation.
-Next, SLAM tries to improve the estimated camera pose using successive frames. Once the algorithm has acquired a new frame it projects its map into the new camera frame, to search for more keypoint correspondences. If it’s certain enough that the keypoints match, it uses the additional data to refine the camera pose.
+In order to do that these keypoints are initially matched between two frames. Using gyroscope and accelerometer data the SLAM can compute the position of same keypoints in different frames and this helps with the **real-time requirement**. The matching results in an initial camera pose estimation.
+Next, SLAM tries to improve the estimated camera pose using successive frames. Once the algorithm has acquired a new frame it projects its map into the new camera frame, to search for more keypoint correspondences. If it is certain enough (verified with a threshold) that the keypoints match, it uses the additional data to refine the camera pose.
 New map points are created by triangulating matching keypoints from connected frames. The triangulation is based on the 2D position of the keypoint in the frames, as well as the translation and rotation between the frames as a whole. Initially, the match is calculated between two frames but it can later be extended to additional frames.
 
 ## Loop Detection and Loop Closing
