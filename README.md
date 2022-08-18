@@ -102,9 +102,9 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 
 1) Install Unity editor 2021.3 or later versions;
 
-2) Download and import the project linked with this repo (once imported an error could appear in the console. Do not care about it, it will not affect the build of the application)
+2) Download and import the project linked with this repo. Once imported an error could appear in the console (***Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'***). Do not care about it, it will not affect the build of the application);
 
-All the following points should be already correctly configured in the downloaded repo. If problems arises check them:
+**All the following points should be already correctly configured in the downloaded repo. If problems arises check them**:
 
 3) Install all the following required packages from `Window -> Package Manager -> Search`:
    - **AR Foundation**;
