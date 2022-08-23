@@ -29,15 +29,14 @@ Its goal is to obtain a global and consistent estimate of a device’s path whil
 This duality has also encouraged its diversification. By dosing the importance given to mapping or to localization, SLAM has been pushed away from the sole robotics field and became a reference to solve problems of many different natures: from **micro aerial vehicles** to **augmented reality (AR) on a smartphone**.<br/>
 The general system of the SLAM algorithm is made up of 4 parts:
    - **Sensor data**: on mobile devices, this usually includes the camera, accelerometer and gyroscope. It might be augmented by other sensors like GPS (indicated for outdoor applications), light sensor, depth sensors, etc;
-   - **Front-End**: composed of two steps. The first step is feature extraction. These features also need to be associated with landmarks, keypoints with a 3D                             position, also called map points. These map points need to be tracked in a video stream (**conversion step**). This phase ends up with the loop                         closure, meaning that the devices reduces drift by recognizing places that have been encountered before (loop closure);
-   - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be performed by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                          the environment.
+   - **Front-End**: composed of two steps. The first step is **feature extraction**. These features also need to be associated with landmarks, keypoints with a 3D                         position, also called map points. These map points need to be tracked in a video stream. This phase ends up with the **loop                                             closure** step, meaning that the device reduces drift by recognizing places that have been encountered before;
+   - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be performed by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                        the environment.
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.
-
 
 ## SLAM in Augmented Reality
  
-In an Augmented Reality scenario the device has to know its 3D position in the world. It calculates this through the spatial **relationship between itself and multiple keypoints**.<br/>
-The useful information to correctly localize itself in a place is acquired through the device camera perhaps we can call the algorithm **visual SLAM**. SLAM instantiates a cartesian coordinate system with the origin in the initial camera's position and then combines the data from the accelerometer and the gyroscope to estimate the movement of the device. Using these data the algorithm is then able to:
+In an Augmented Reality scenario the device has to know its 3D position in the world. It calculates this through the **spatial relationship between itself and multiple keypoints**.<br/>
+The useful information to correctly localize itself in a place is acquired through the device camera, perhaps we can call the algorithm **visual SLAM**. SLAM instantiates a cartesian coordinate system with the origin in the initial camera's position and then combines the data from the accelerometer and the gyroscope to estimate the movement of the device. Using these data the algorithm is then able to:
    - **Build a map of the environment**;
    - **Localize the device itself within that environment**;
 
@@ -54,8 +53,8 @@ Now we know what a SLAM algorithm uses for AR applications in terms of hardware 
 ## (Good) Feature Points
 
 The first step is to find distinctive locations in images, such as corners and use them as **feature points.** This points will be used later to build and retrieve the information about the environment. <br/>
-While using an AR application many conditions can change, i.e:
-   - **camera angle / perspective**;
+While using an AR application many conditions can change, i.e.:
+   - **camera angle and perspective**;
    - **rotation**;
    - **scale**;
    - **lighting**
@@ -71,7 +70,7 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
  
 ## Feature points extraction
 
-Finding distinctive feature points in images has been an active research field for quite some time. The most influential algorithms are called **“SIFT” (“Scale Invariant Feature Transform”)** and **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices and therefore SLAM algorithms use an ad-hoc tracking algorithm called ORB.<br/>
+Finding distinctive feature points in images has been an active research field for quite some time. The most influential algorithms are called **“SIFT” (“Scale Invariant Feature Transform”)** and **“SURF” (Speeded up robust features”)** and both are still in use today. However, both algorithms are patented and usually too slow for real-time use on mobile devices and therefore SLAM algorithms use an ad-hoc tracking algorithm called **ORB** (.<br/>
 The process to extract good keypoints is divided in two phases:
    - **keypoint detection**: could be performed by a **corners-detection algorithm**. It is important that the algorithm is scale-invariant and less dependent on noise. SIFT and SURF are good choices for that but due to complexity reasons the most used algorithm is **BRISK**. 
    - **keypoint description**: each of all the detected keypoints have to be unique and most important the algorithm must find the same feature again in the image under different circumstances (i.e. light change). Briefly speaking it **has to be robust**. BRISK is still the best algorithm to perform keypoint description as it is robust to light and perspective. 
