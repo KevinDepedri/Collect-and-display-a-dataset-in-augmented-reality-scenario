@@ -225,7 +225,7 @@ After that the acquisition has been performed, the anchors have been hosted and 
 
 # Demo
 
-For a demonstration of the app download the videos folder in this repo. In this section we provide a brief description of each video.<br/>
+For a demonstration of the app lok at the videos folder in this repo. In this section we provide a brief description of each video.<br/>
 In the folder you find four videos that summirize the main aspects of the application:
    - **ScanfOfTheArea.mp4**: in this video the user scans the area around the device. The scan has to last from 15 to 30 seconds;
    - **PlacementOfObjects.mp4**: the holograms are instantiated. They are placed according to the position of the camera and its rotation;
