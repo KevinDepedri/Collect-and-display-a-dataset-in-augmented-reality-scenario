@@ -33,7 +33,7 @@ The general system of the SLAM algorithm is made up of 4 parts:
    - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be performed by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                        the environment;
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.<br/><br/>
   
- ![image_0](https://it.mathworks.com/discovery/slam/_jcr_content/mainParsys3/discoverysubsection/mainParsys3/image.adapt.full.medium.png/1640333917572.png)<br/<br/>
+ ![image_0](https://it.mathworks.com/discovery/slam/_jcr_content/mainParsys3/discoverysubsection/mainParsys3/image.adapt.full.medium.png/1640333917572.png)<br/><br/>
 
 ## SLAM in Augmented Reality
  
@@ -67,7 +67,7 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
  
 *Step 1: Good feature points detection*:<br/><br/>
 
-![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif) <br/><br/>
+![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif)<br/><br/>
  
  
 ## Feature points extraction
