@@ -32,6 +32,8 @@ The general system of the SLAM algorithm is made up of 4 parts:
    - **Front-End**: composed of two steps. The first step is **feature extraction**. These features also need to be associated with landmarks, keypoints with a 3D                         position, also called map points. These map points need to be tracked in a video stream. This phase ends up with the **loop                                             closure** step, meaning that the device reduces drift by recognizing places that have been encountered before;
    - **Back-End**: establishes the relationship between different frames, localizing the camera, as well as handling the overall                                                          geometrical reconstruction. This phase can be performed by sparse reconstruction (based on the keypoints) or capturing a dense 3D point cloud of                        the environment;
    - **SLAM estimate**: the result containing the tracked features, their locations and relations, as well as the camera position within the world.<br/><br/>
+   
+   *Image 1: cleaning of a room: differences using SLAM or not*:<br/><br/>
   
  ![image_0](https://it.mathworks.com/discovery/slam/_jcr_content/mainParsys3/discoverysubsection/mainParsys3/image.adapt.full.medium.png/1640333917572.png)<br/><br/>
 
