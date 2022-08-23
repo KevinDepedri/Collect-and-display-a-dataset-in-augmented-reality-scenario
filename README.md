@@ -142,9 +142,6 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 
 # Description
 
-
-
-
 ## Structure of the script
 The application is based in 2 main classes: ARPlacementManager and ARCloudAnchorManager, together with 3 minor classes ARDebugManager, SaveManager and AnchorEntity. 
 
