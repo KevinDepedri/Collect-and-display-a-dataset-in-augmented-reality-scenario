@@ -2,7 +2,7 @@
 
 # About the project
 
-**The project aims to the collection and visualization of a dataset in an augmented reality scenario**.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
+**The project aims to the collection and visualization of a dataset in an augmented reality scenario**. Pratically speaking the target is to visualize in an ARCore session holograms (screenshots of the current camera view) in the position of the device and with the same inclination of the device's camera.<br/>It has been developed by Giovanni Ambrosi and Kevin Depedri for the Computer Vision course a.y. 2021-2022 Master in Artificial Intelligent Systems at the University of Trento. **The app is intended for Android devices only**.  
 
 # Table of contents
 
