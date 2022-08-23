@@ -171,7 +171,16 @@ As the application starts, the user is required to scan the environment for at l
 It is important to remember that environment with extreme light conditions (brightness or darkness) and with important reflections will be very difficult to map, also when performing a scan procedure for 30 seconds or more. In this case the placed object could be positioned in imprecise positions and the anchors could be really difficult to retrieve.
 
 ### Moving the first steps
-After performing the scan of the environmente the user is able to place as many screenshot objects as he wants. To place an object it is sufficient to perform `One-Tap` on the area of the screen where the acquisition of the camera is visible. When an object is placed the user need to move slightly backward to be able to see the performed acquisition, which will be positioned with the correct inclination and also with the correct rotation (vertical or horizontal).
+After performing the scan of the environmente the user is able to place as many screenshot objects as he wants. To place an object (hologram) it is sufficient to perform `One-Tap` on the area of the screen where the acquisition of the camera is visible. When an object is placed the user need to move slightly backward to be able to see the performed acquisition, which will be positioned with the correct inclination and also with the correct rotation (vertical or horizontal).
+
+### Save of the holograms
+All the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as "Image-nr" where nr is an integer index (the path is reacheable from the File Manager folder in the home screen). Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
+**Image-nr<br/><br/>
+coordinate x: position.x<br/> coordinate y: position.y<br/> coordinate z: position.z<br/>
+quaternion rotation: (a,b,c,d)<br/><br/>**
+where position.x, position.y, position.z are the spatial coordinates of the camera and a,b,c,d are the coordinates to represent the rotation of the camera.
+
+
 
 ### Dealing with a multiple list system
 The application is based on a multiple list system which allows to have different list for local objects and cloud object. In this way the user is able to acquire the wanted screenshot locally, then to evaluate them and eventually to remove the not good ones pressing the `Remove Last Obj button` to then acquire them again. Finally, the users is able to host them when he is satisfied with the result pressing the `Host Anchors button`.
@@ -204,13 +213,6 @@ After that the acquisition has been performed, the anchors have been hosted and 
 5) After closing and re-starting the application:
    - **Start a fresh new session**: place a screenshot object and host it to start a new session and overwrite the previous one;
    - **Retrieve the previous session**: resolve the previously hosted anchors to retrieve the previous session and update it.
-
-<br/>**NOTE**:<br/> All the pictures are saved in a predefined path in the device (android/data/com.WreckerCompany.ARHolograms/files/SavedImage/). The images are named as "Image-nr" where nr is an integer index (the path is reacheable from the File Manager folder in the home screen). Along with the pictures there is in the same folder a txt file where the informations about the position and rotation of the camera are written. These infos are saved with the following format: <br/><br/>
-**Image-nr<br/><br/>
-coordinate x: position.x<br/> coordinate y: position.y<br/> coordinate z: position.z<br/>
-quaternion rotation: (a,b,c,d)<br/><br/>**
-where position.x, position.y, position.z are the spatial coordinates of the camera and a,b,c,d are the coordinates to represent the rotation of the camera.
-
 
 
 # Documentation and useful links
