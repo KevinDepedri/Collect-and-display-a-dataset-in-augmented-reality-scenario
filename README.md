@@ -67,7 +67,7 @@ For that reason a feature point alone is not enough to elaborate sufficiently th
  
 *Step 1: Good feature points detection*:<br/><br/>
 
-![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif)<br/><br/>
+![image_1](https://www.andreasjakl.com/wp-content/uploads/2018/08/arcore-anchors.gif) <br/><br/>
  
  
 ## Feature points extraction
