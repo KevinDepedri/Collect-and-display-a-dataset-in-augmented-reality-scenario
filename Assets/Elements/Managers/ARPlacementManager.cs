@@ -27,6 +27,7 @@ public class ARPlacementManager : DilmerGames.Core.Singletons.Singleton<ARPlacem
     private float _screenWidth = 0;
     private float _screenHeight = 0;
     private bool _vertical;
+    public string file_name = "coordinates&rotation.txt";
     
     
     
@@ -158,12 +159,27 @@ public class ARPlacementManager : DilmerGames.Core.Singletons.Singleton<ARPlacem
         //Encode the texture to PNG and define the saving path as: Android/Data/com.DittaDemolizioni.Ar_NEW2/files/SavedImage/image-X.png
         var bytes = texture.EncodeToPNG();
         var dirpath = Application.persistentDataPath + "/SavedImage/"; 
+        var filepath = Application.persistentDataPath + "/SavedImage/" + file_name;
         //TODO: move to "/SavedImage/SessionIndex" where SessionIndex is generated casually and then stored inside _anchorEntity.
         //TODO: in this way all the sessions photo will be separated in directories and it will be impossible to load wrong photos
         
         //If the directory does not exists then create it. Write the image and finally destroy the texture
         if (!Directory.Exists(dirpath)) Directory.CreateDirectory(dirpath);
         File.WriteAllBytes(dirpath + "Image-" + (_retrievedPhotoCounter) + ".png", bytes);
+        
+        using (StreamWriter writer = new StreamWriter(filepath, true))
+        {
+            writer.WriteLine("Image-" + _retrievedPhotoCounter);
+            writer.WriteLine("\n");
+            writer.WriteLine("coordinate x: " + _photoPosition.x);
+            writer.WriteLine("coordinate y: " + _photoPosition.y);
+            writer.WriteLine("coordinate z: " + _photoPosition.z);
+            writer.WriteLine("quaternion rotation: " + _photoRotation);
+            writer.WriteLine("\n");
+
+        }
+        
+        
         Destroy(texture);
         
         //Turn on all the UI elements
