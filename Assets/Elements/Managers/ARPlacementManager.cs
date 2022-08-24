@@ -160,8 +160,6 @@ public class ARPlacementManager : DilmerGames.Core.Singletons.Singleton<ARPlacem
         var bytes = texture.EncodeToPNG();
         var dirpath = Application.persistentDataPath + "/SavedImage/"; 
         var filepath = Application.persistentDataPath + "/SavedImage/" + file_name;
-        //TODO: move to "/SavedImage/SessionIndex" where SessionIndex is generated casually and then stored inside _anchorEntity.
-        //TODO: in this way all the sessions photo will be separated in directories and it will be impossible to load wrong photos
         
         //If the directory does not exists then create it. Write the image and finally destroy the texture
         if (!Directory.Exists(dirpath)) Directory.CreateDirectory(dirpath);
