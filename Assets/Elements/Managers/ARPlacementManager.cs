@@ -179,7 +179,6 @@ public class ARPlacementManager : DilmerGames.Core.Singletons.Singleton<ARPlacem
 
         }
         
-        
         Destroy(texture);
         
         //Turn on all the UI elements
