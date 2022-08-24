@@ -105,9 +105,9 @@ We have had a look to the principles of the SLAM algorithm in Augmented Reality.
 
 1) Install Unity editor 2021.3 or later versions;
 
-2) Download and import the project linked with this repo. Once imported an error could appear in the console (***Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'***). Do not care about it, it will not affect the build of the application;
+2) Unzip the folder arcore-unity-extensions-master.zip. **It is recommended to unzip it out of the project folder. Once the files are extracted copy the entire folder into the project folder (this step is necessary since long path names could not be managed from Windows systems)**;
 
-3) Unzip the folder arcore-unity-extensions-master.zip in the project folder;
+3) Download and import the project linked with this repo. Once imported an error could appear in the console (***Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'***). Do not care about it, it will not affect the build of the application;
 
 **All the following points should be already correctly configured in the downloaded repo. If problems arises check them**:
 
